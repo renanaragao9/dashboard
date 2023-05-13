@@ -14,165 +14,238 @@
     
     <title>Israel Tranning</title>
 </head>
-<body class="blue-grey lighten-5">
-      <!-- Sidebar (Menu superior) -->
-      <nav>
-          <div class="nav-wrapper light-blue darken-4">
-            
-            <!-- Botão hamburguer para o mobile-->
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-            <a href="#!" class="brand-logo center"><i class="material-icons left" >fitness_center</i>Israel Dantas</a>
-              <ul class="right hide-on-med-and-down">               
-                <li><a href="sass.html"></a></li>
-                <li><a href="#!" ><i class="material-icons right">notifications</i></a></li>
-                <li><a href="badges.html"><i class="material-icons left">mail</i></a></li>
-            
-                    <!-- Dropdown Trigger -->
-                    <li><a href="" id="nav-name">Renan Aragão</a></li>
-                    <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
-                      <!-- Estrutura do Dropdown -->
-                      <ul id="dropdown" class="dropdown-content">
-                        <li><a href="#!"><i class="material-icons">person</i>Perfil</a></li>
-                        <li><a href="#!"><i class="material-icons">view_cozy</i>Log</a></li>
-                        <li class="divider"></li><li class="divider"></li><li class="divider"></li>
-                        <li><a href="#!"><i class="material-icons">logout</i>Sair</a></li>
-                      </ul>
-              </ul>
-          </div>
-      </nav>
+<body class="blue-grey lighten-5" onload="myFunction()" style="margin: 0;">
 
-      <!-- Sidenav (Menu Lateral)-->
-      <ul id="slide-out" class="sidenav sidenav-fixed blue accent-2 text-grey darken-4">
-        <li class="collapsible center"><a class="subheader">Atalhos</a></li>
-        <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons" id="title-icon">fitness_center</i>Administração</a></li>
-        <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons left">group</i>Alunos</a></li>
-        <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-              <li>
-                <a class="collapsible-header waves-effect">Cadastro<i class="material-icons">folder_copy</i> <i class="material-icons right">arrow_drop_down</i></a>
-                <div class="collapsible-body blue accent-2">
-                  <ul>
-                    <li><a href="#!">Aluno<i class="material-icons">person</i></a></li>
-                    <li  class="collapsible"></li>
-                    <li><a href="#!">Exercicio<i class="material-icons">fitness_center</i></a></li>
-                    <li  class="collapsible"></li>
-                    <li><a href="#!">Grupo Muscular<i class="material-icons">fitness_center</i></a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-        </li>
-        <li class="no-padding">
+  <!-- Botão Flutuante-->
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large light-blue darken-4">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">bug_report</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">forum</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">person</i></a></li>
+      </ul>
+    </div>
+  
+  <!-- Inicio da Sidebar e NavBar-->
+  <header>
+    
+    <!-- Sidebar (Menu superior) -->
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+  
+        <!-- Botão hamburguer para o mobile-->
+        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+        <!-- Botão de sair para o mobile-->
+        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger right"><i class="material-icons">logout</i></a>
+
+        <a href="#!" class="brand-logo center"><i class="material-icons left" >fitness_center</i>Israel Dantas</a>
+        <ul class="right hide-on-med-and-down">               
+          <li><a href="sass.html"></a></li>
+          <li><a href="#!" ><i class="material-icons right">notifications</i></a></li>
+          <li><a href="badges.html"><i class="material-icons left">mail</i></a></li>
+      
+              <!-- Dropdown Menu -->
+              <li><a href="" id="nav-name">Renan Aragão</a></li>
+              <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
+                <!-- Estrutura do Dropdown -->
+                <ul id="dropdown" class="dropdown-content">
+                  <li><a href="#!"><i class="material-icons">person</i>Perfil</a></li>
+                  <li><a href="#!"><i class="material-icons">view_cozy</i>Log</a></li>
+                  <li class="divider"></li><li class="divider"></li><li class="divider"></li>
+                  <li><a href="#!"><i class="material-icons">logout</i>Sair</a></li>
+                </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sidenav (Menu Lateral)-->
+    <ul id="slide-out" class="sidenav sidenav-fixed blue accent-2 text-grey darken-4">
+      <li class="collapsible center"><a class="subheader">Atalhos</a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons" id="nav-title-icon">fitness_center</i>Administração</a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons left">group</i>Alunos</a></li>
+      <li class="no-padding">
           <ul class="collapsible collapsible-accordion">
             <li>
-              <a class="collapsible-header waves-effect"><i class="material-icons">table_view</i>Tabelas<i class="material-icons right">arrow_drop_down</i></a>
+              <a class="collapsible-header waves-effect">Cadastro<i class="material-icons">folder_copy</i> <i class="material-icons right">arrow_drop_down</i></a>
               <div class="collapsible-body blue accent-2">
                 <ul>
-                  <li><a href="#!">Alunos<i class="material-icons ">table_chart</i></a></li>
+                  <li><a href="#!">Aluno<i class="material-icons">person</i></a></li>
                   <li  class="collapsible"></li>
-                  <li><a href="#!">Exercicios<i class="material-icons">table_chart</i></a></li>
+                  <li><a href="#!">Exercicio<i class="material-icons">fitness_center</i></a></li>
                   <li  class="collapsible"></li>
-                  <li><a href="#!">Grupos musculares<i class="material-icons">table_chart</i></a></li>
-                  <li  class="collapsible"></li>
-                  <li><a href="#!">Grupos de exercicios<i class="material-icons">table_chart</i></a></li>
+                  <li><a href="#!">Grupo Muscular<i class="material-icons">fitness_center</i></a></li>
                 </ul>
               </div>
             </li>
           </ul>
-        </li>
-        <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">bar_chart_4_bars</i>Estatisticas </a></li>
-        <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">forum</i>Chamados </a></li>
-      </ul>
-      <main>
-        <div class="container">
-          <div class="masonry row" id="main">
-            <div class="col s12" id="main-title">
-              <h2>Painel de controle</h2>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons">table_view</i>Tabelas<i class="material-icons right">arrow_drop_down</i></a>
+            <div class="collapsible-body blue accent-2">
+              <ul>
+                <li><a href="#!">Alunos<i class="material-icons ">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Exercicios<i class="material-icons">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Grupos musculares<i class="material-icons">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Grupos de exercicios<i class="material-icons">table_chart</i></a></li>
+              </ul>
             </div>
-            <div class="row">
-              <div class="col s12">
-                <div class="card white">                  
-                  <ul class="collapsible">
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
+          </li>
+        </ul>
+      </li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">bar_chart_4_bars</i>Estatisticas </a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">forum</i>Chamados </a></li>
+    </ul>
+</header>
 
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                  </ul>
+<!-- início do preloader -->
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<!-- Conteúdo -->
+  <main >
+    <div class="container">
+      <div class="row">
+        <div class="col l12 push-l2">
+          
+          <!--Divs para titulo e Reporte -->
+          <div class="row">
+            <div class="col s10">
+              <h2>Dashboard</h2>
+            </div>
+            
+            <div class="col s2" id="button-report">
+              <h2>
+                <a class="waves-effect waves-light btn blue-grey"><i class="material-icons left">bug_report</i>Reportar</a>
+              </h2>
+            </div>
+          </div>
+          
+          <!--Divs para estatísticas aluno, fichas, chamados etc... -->
+          <div class="row">
+            <div class="col s12 m6 l3">
+              <div class="card-panel center">
+                <i class="material-icons medium">supervisor_account</i>
+                <h5>Alunos</h5>
+                <h3 class="count">350</h3>
+                <div class="progress grey lighten-1">
+                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
                 </div>
               </div>
             </div>
-          </div>      
-        </div>
-      </main>
-      
-      <!-- Inicio da Footer -->
-      <footer class="page-footer light-blue darken-4">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+
+            <div class="col s12 m6 l3">
+              <div class="card-panel center">
+                <i class="material-icons medium">forum</i>
+                <h5>Chamados</h5>
+                <h3 class="count">350</h3>
+                <div class="progress grey lighten-1">
+                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                </div>
+              </div>
             </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
+
+            <div class="col s12 m6 l3">
+              <div class="card-panel center">
+                <i class="material-icons medium">format_list_bulleted</i>
+                <h5>Fichas</h5>
+                <h3 class="count">350</h3>
+                <div class="progress grey lighten-1">
+                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                </div>
+              </div>
             </div>
-          </div>
+
+            <div class="col s12 m6 l3">
+              <div class="card-panel center">
+                <i class="material-icons medium">analytics</i>
+                <h5>Avaliações</h5>
+                <h3 class="count">350</h3>
+                <div class="progress grey lighten-1">
+                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!--Div para chamados -->
+            <div class="row">
+              <div class="col s12">      
+                <ul class="collection">
+                  
+                  <li class="collection-item avatar" ><h4>Chamados</h4><p>Veja abaixo alguns de seus chamados</p></li>
+                  
+                  <li class="collection-item avatar">
+                      <img src="img/renan.jpeg" alt="" class="circle">
+                      <span class="title">Renan Aragão</span>
+                      <p>Troca de senha</p>
+                      <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
+                    
+                  </li>
+                  
+                  <li class="collection-item avatar">
+                    <img src="img/person1.jpg" alt="" class="circle">
+                    <span class="title">Israel Dantas</span>
+                    <p>Mudança de ficha</p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
+                  </li>
+                  
+                  <li class="collection-item avatar">
+                    <img src="img/person2.jpg" alt="" class="circle">
+                    <span class="title">Lucas Lima</span>
+                    <p>Solicitação de Avaliação</p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
+                  </li>
+                  
+                  <li class="collection-item avatar">
+                    <img src="img/person3.jpg" alt="" class="circle">
+                    <span class="title">Ana Maria</span>
+                    <p>Solicitação de ficha nova</p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © 2014 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
-        </div>
-      </footer>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="section light-blue darken-4 white-text center">
+    <p>Renan Aragão Copyright &copy; 2023</p>
+  </footer>
+
+  <!-- Inicio das chamdas de Scripts -->
+
+    <!-- Jquery-->
+    <script src="js/jquery.js"></script> 
     
-      <!-- Inicio das chamdas de Scripts -->
+    <!-- Materialize-->
+    <script src="js/materialize.js"></script>
     
-        <!-- Jquery-->
-        <script src="js/jquery.js"></script> 
-        
-        <!-- Materialize-->
-        <script src="js/materialize.js"></script>
-        
-        <!-- Funcoes -->
-        <script src="js/funcoes.js"></script>
-    
-      <!-- Fim das chamadas de Scripts -->
+    <!-- Funcoes -->
+    <script src="js/funcoes.js"></script>
+
+    <script>
+      var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 2000); // aumentei o tempo para ilustração
+}
+
+function showPage() {
+   document.getElementById("loader").style.display = "none";
+   document.getElementById("myDiv").style.display = "block";
+}
+    </script>
+  <!-- Fim das chamadas de Scripts -->
 </body>
 </html>

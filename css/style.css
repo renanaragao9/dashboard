@@ -1,6 +1,8 @@
+
 /* Reconfigurando algumas classes de CSS do Materialize para se adaptar melhor ao site */
 
 /* NAVBAR */
+
 nav .brand-logo {
     font-size: 1.6rem;
 }
@@ -13,14 +15,9 @@ nav .brand-logo i.material-icons {
   font-size: 2.4rem;
 }
 
-#circle-img-nav {
-    margin-left: 35%;
-}
-
 #nome-nav {
     font-size: large;
 }
-
 
 #nav-name{
     font-size: 18px;
@@ -32,11 +29,15 @@ nav .brand-logo i.material-icons {
     margin-top: 12px;
 }
 
+#nav-mobile-icon{
+    display: none;
+}
+
 #nav-color {
     color: black;
 }
 
-#title-icon{
+#nav-title-icon{
     font-size: 35px;
 }
 
@@ -48,6 +49,8 @@ nav .brand-logo i.material-icons {
     min-width: 150px;
 }
 
+/* Conteudo da pagina */
+
 #main {
     position: relative;
     height: 100%
@@ -58,6 +61,8 @@ nav .brand-logo i.material-icons {
     top: 0px;
 }
 
+
+/* Algumas medias para desktops pequenos */
 @media only screen and (min-width: 993px) {
     nav .brand-logo {
         font-size: 2.6rem;
@@ -70,6 +75,71 @@ nav .brand-logo i.material-icons {
     #nav-drop {
         display: flex;
     }
+
 }
+
+/* Algumas medidas para mobille */
+@media screen and (max-width: 992px) { 
+    #button-report {
+        display: none;
+    }
+
+    #nav-mobile-icon{
+        display: flex;
+    }
+
+}
+
+/* Preloader */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #01579b;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+  #myDiv {
+    display: none;
+    text-align: center;
+  }
 
 /* Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; */
