@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Links dos Icones-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Links de customização-->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Israel Tranning</title>
+</head>
+
+<body class="blue-grey lighten-5" onload="myFunction()" style="margin: 0;">
+
+  <!-- Botão Flutuante-->
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large light-blue darken-4">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">bug_report</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">forum</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">person</i></a></li>
+      </ul>
+    </div>
+  
+  <!-- Inicio da Sidebar e NavBar-->
+  <header>
+    
+    <!-- Sidebar (Menu superior) -->
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+  
+        <!-- Botão hamburguer para o mobile-->
+        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+        <!-- Botão de sair para o mobile-->
+        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger right"><i class="material-icons">logout</i></a>
+
+        <a href="#!" class="brand-logo center"><i class="material-icons left" >fitness_center</i>Israel Dantas</a>
+        <ul class="right hide-on-med-and-down">               
+          <li><a href="sass.html"></a></li>
+          <li><a href="#!" ><i class="material-icons right">notifications</i></a></li>
+          <li><a href="badges.html"><i class="material-icons left">mail</i></a></li>
+      
+              <!-- Dropdown Menu -->
+              <li><a href="" id="nav-name">Renan Aragão</a></li>
+              <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
+                <!-- Estrutura do Dropdown -->
+                <ul id="dropdown" class="dropdown-content">
+                  <li><a href="#!"><i class="material-icons">person</i>Perfil</a></li>
+                  <li><a href="#!"><i class="material-icons">view_cozy</i>Log</a></li>
+                  <li class="divider"></li><li class="divider"></li><li class="divider"></li>
+                  <li><a href="#!"><i class="material-icons">logout</i>Sair</a></li>
+                </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sidenav (Menu Lateral)-->
+    <ul id="slide-out" class="sidenav sidenav-fixed blue accent-2 text-grey darken-4">
+      <li class="collapsible center"><a class="subheader">Atalhos</a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons" id="nav-title-icon">fitness_center</i>Administração</a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons left">group</i>Alunos</a></li>
+      <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header waves-effect">Cadastro<i class="material-icons">folder_copy</i> <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body blue accent-2">
+                <ul>
+                  <li><a href="#!">Aluno<i class="material-icons">person</i></a></li>
+                  <li  class="collapsible"></li>
+                  <li><a href="#!">Exercicio<i class="material-icons">fitness_center</i></a></li>
+                  <li  class="collapsible"></li>
+                  <li><a href="#!">Grupo Muscular<i class="material-icons">fitness_center</i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons">table_view</i>Tabelas<i class="material-icons right">arrow_drop_down</i></a>
+            <div class="collapsible-body blue accent-2">
+              <ul>
+                <li><a href="#!">Alunos<i class="material-icons ">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Exercicios<i class="material-icons">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Grupos musculares<i class="material-icons">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Grupos de exercicios<i class="material-icons">table_chart</i></a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">bar_chart_4_bars</i>Estatisticas </a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">forum</i>Chamados </a></li>
+    </ul>
+</header>
+
+<!-- início do preloader -->
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom"> 
+<!-- Conteúdo -->
+  <main >
+    <div class="container">
+      <div class="row">
+        <div class="col l12 push-l2">
+          
+          <!--Divs para titulo e Reporte -->
+            <div class="row">
+                <div class="col s10">
+                <h2>Cadastro de Aluno</h2>
+                </div>
+                
+                <div class="col s2" id="button-report">
+                <h2>
+                    <a class="waves-effect waves-light btn blue-grey"><i class="material-icons left">bug_report</i>Reportar</a>
+                </h2>
+                </div>
+            </div>
+                <!-- Inicio de conteudo -->
+                <div class="row">
+                    <div class="col s12 m10">
+                      <div class="card white">
+                        <div class="card-content">           
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col s12 l6">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="icon-nome" type="text" class="validate">
+                                            <label for="icon-nome">Nome</label>
+                                        </div>
+                                        <div class="input-field col s12 l6">
+                                            <i class="material-icons prefix">account_circle</i>
+                                            <input id="icon_sobrenome" type="text" class="validate">
+                                            <label for="icon_sobrenome">Sobrenome</label>
+                                        </div>
+                                        <div class="input-field col s12 l6">
+                                            <i class="material-icons prefix">phone</i>
+                                            <input id="icon_telephone" type="tel" class="validate">
+                                            <label for="icon_telephone">Telephone</label>
+                                        </div>
+                                        <div class="input-field col s12 l6">
+                                            <i class="material-icons prefix">calendar_month</i>                       
+                                            <input type="text" class="datepicker">
+                                            <label for="icon_calendar">Data de Nascimento</label>
+                                        </div>
+                                        <div class="input-field col s12 l6">
+                                            <i class="material-icons prefix">mail</i>
+                                            <input id="email" type="email" class="validate">
+                                            <label for="email">Email</label>
+                                            <span class="helper-text" data-error="Email Inválido" data-success="right"></span>
+                                        </div>
+                                        <div class="input-field col s12 l6">
+                                            <i class="material-icons prefix">lock</i>
+                                            <input id="password" type="password" class="validate">
+                                            <label for="password">Password</label>
+                                          </div>
+                                    </div>
+                                </form>
+                            </div>    
+                        </div>
+                        <div class="card-action">
+                          <a href="#">Cadastrar</a>
+                          <a href="#" class="right">Cancelar</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- Fim Inicio de conteudo -->
+        </div> 
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="section light-blue darken-4 white-text center">
+    <p>Renan Aragão Copyright &copy; 2023</p>
+  </footer>
+
+  <!-- Inicio das chamdas de Scripts -->
+
+    <!-- Jquery-->
+    <script src="js/jquery.js"></script> 
+    
+    <!-- Materialize-->
+    <script src="js/materialize.js"></script>
+    
+    <!-- Funcoes -->
+    <script src="js/funcoes.js"></script>
+
+    <script>
+      var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 1000); // aumentei o tempo para ilustração
+}
+
+function showPage() {
+   document.getElementById("loader").style.display = "none";
+   document.getElementById("myDiv").style.display = "block";
+}
+    </script>
+  <!-- Fim das chamadas de Scripts -->
+</body>
+</html>

@@ -18,6 +18,8 @@ $(document).ready(function(){
       hoverEnabled: false
     });
 
+    $('.datepicker').datepicker();
+
 });
 
 
