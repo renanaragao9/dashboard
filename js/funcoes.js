@@ -1,10 +1,8 @@
 $(document).ready(function(){
 
     // Chamada para ativar o dropdown do menu navbar
-    $(".dropdown-trigger").dropdown({
-      hover: false,
+    $(".dropdown-trigger").dropdown({ 
       coverTrigger: false,
-      hover: true,
     });
   
     // Chamada para ativar o dropdown da navbar
@@ -18,7 +16,10 @@ $(document).ready(function(){
       hoverEnabled: false
     });
 
+    // Chamada para o input Data
     $('.datepicker').datepicker();
+
+    $('select').formSelect();
 
 });
 
