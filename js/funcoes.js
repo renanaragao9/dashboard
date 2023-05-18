@@ -17,24 +17,46 @@ $(document).ready(function(){
     });
 
     // Chamada para o input Data
-    $('.datepicker').datepicker();
+    $('.datepicker').pickadate({
+      monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+      monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+      weekdaysFull: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabádo'],
+      weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+      today: 'Hoje',
+      clear: 'Limpar',
+      close: 'Pronto',
+      labelMonthNext: 'Próximo mês',
+      labelMonthPrev: 'Mês anterior',
+      labelMonthSelect: 'Selecione um mês',
+      labelYearSelect: 'Selecione um ano',
+      selectMonths: true, 
+      selectYears: 15 
+      });
 
+      // Chamada para os selects
     $('select').formSelect();
 
 });
 
 
-  /* Fullscreen */
-function fullScreen() {        
-  if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-  } else {
-      document.exitFullscreen();
+/* Chamada para tela ficar Fullscreen */
+  function fullScreen() {        
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
   }
+
+
+/* Chamada pro Preloader   */ 
+var myVar;
+      
+function myFunction() {
+    myVar = setTimeout(showPage, 2000); // aumentei o tempo para ilustração
 }
 
-  /* Preloader */
-  $(window).load(function () {
-  $(".loader").delay(1500).fadeOut("slow"); //retire o delay quando for copiar!
-  $("#tudo_page").toggle("fast");
-});
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}

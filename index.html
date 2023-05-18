@@ -7,7 +7,11 @@
     
     <!-- Links dos Icones-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Link para chamar o chartJS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     
     <!-- Links de customização-->
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -38,7 +42,7 @@
       <div class="nav-wrapper light-blue darken-4">
   
         <!-- Botão hamburguer para o mobile-->
-        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <!-- Botão de sair para o mobile-->
         <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger right"><i class="material-icons">logout</i></a>
@@ -54,17 +58,17 @@
               <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
                 <!-- Estrutura do Dropdown -->
                 <ul id="dropdown" class="dropdown-content">
-                  <li><a href="#!"><i class="material-icons">person</i>Perfil</a></li>
-                  <li><a href="#!"><i class="material-icons">view_cozy</i>Log</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">person</i>Perfil</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">view_cozy</i>Log</a></li>
                   <li class="divider"></li><li class="divider"></li><li class="divider"></li>
-                  <li><a href="#!"><i class="material-icons">logout</i>Sair</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">logout</i>Sair</a></li>
                 </ul>
         </ul>
       </div>
     </nav>
 
     <!-- Sidenav (Menu Lateral)-->
-    <ul id="slide-out" class="sidenav sidenav-fixed blue accent-2 text-grey darken-4">
+    <ul id="slide-out" class="sidenav blue accent-2 text-grey darken-4">
       <li class="collapsible center"><a class="subheader">Atalhos</a></li>
       <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons" id="nav-title-icon">fitness_center</i>Administração</a></li>
       <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons left">group</i>Alunos</a></li>
@@ -114,106 +118,148 @@
   <main >
     <div class="container">
       <div class="row">
-        <div class="col l12 push-l2">
-          
-          <!--Divs para titulo e Reporte -->
-          <div class="row">
-            <div class="col s10">
-              <h2>Dashboard</h2>
-            </div>
-            
-            <div class="col s2" id="button-report">
-              <h2>
-                <a class="waves-effect waves-light btn blue-grey"><i class="material-icons left">bug_report</i>Reportar</a>
-              </h2>
-            </div>
+        
+        <!--Divs para titulo e Reporte -->
+        <div class="row">
+          <div class="col s10">
+            <h3 id="titleColor">Painel Administrativo</h3>
           </div>
           
-          <!--Divs para estatísticas aluno, fichas, chamados etc... -->
-          <div class="row">
-            <div class="col s12 m6 l3">
+          <div class="col s2" id="button-report">
+            <h2>
+              <a class="waves-effect waves-light btn blue accent-2"><i class="material-icons left" >bug_report</i>Reportar</a>
+            </h2>
+          </div>
+        </div>
+        
+        <!--Div para o bloco de notas -->
+        <div class="row">
+          <div class="col s12 z-depth-3">
+            <div class="card-panel">
+              <h4 id="titleColor"> Bloco de anotações</h4>
+        
+              <form id="todo-form">
+                <div class="input-field">
+                  <input type="text" id="todo-input" autocomplete="off" placeholder="Digite aqui a sua anotação">
+                </div>
+                <button class="btn waves-effect waves-light blue accent-2" type="submit">Adicionar</button>
+              </form>
+        
+              <ul id="todo-list" class="collection"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+              <h5 id="titleColor" class="center">Atalhos e Informações</h5>
+          </div>
+
+        <!--Divs para estatísticas aluno, fichas, chamados etc... -->
+        <div class="row">
+          <div class="col s12 m6 l3 z-depth-3">
+            <a href="" class="black-text">
               <div class="card-panel center">
-                <i class="material-icons medium">supervisor_account</i>
+                <i class="material-icons medium" id="blueColor">supervisor_account</i>
                 <h5>Alunos</h5>
                 <h3 class="count">350</h3>
                 <div class="progress grey lighten-1">
-                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                  <div class="determinate blue accent-2" style="width: 35%;"></div>
                 </div>
               </div>
-            </div>
+            </a>
+          </div>
 
-            <div class="col s12 m6 l3">
+          <div class="col s12 m6 l3 z-depth-3">
+            <a href="" class="black-text">
               <div class="card-panel center">
-                <i class="material-icons medium">forum</i>
+                <i class="material-icons medium" id="blueColor">forum</i>
                 <h5>Chamados</h5>
                 <h3 class="count">350</h3>
                 <div class="progress grey lighten-1">
-                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                  <div class="determinate blue accent-2" style="width: 54%;"></div>
                 </div>
               </div>
-            </div>
+            </a>
+          </div>
 
-            <div class="col s12 m6 l3">
+          <div class="col s12 m6 l3 z-depth-3">
+            <a href="" class="black-text">
               <div class="card-panel center">
-                <i class="material-icons medium">format_list_bulleted</i>
+                <i class="material-icons medium" id="blueColor">format_list_bulleted</i>
                 <h5>Fichas</h5>
                 <h3 class="count">350</h3>
                 <div class="progress grey lighten-1">
-                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
+                  <div class="determinate blue accent-2" style="width: 78%;"></div>
                 </div>
               </div>
-            </div>
-
-            <div class="col s12 m6 l3">
-              <div class="card-panel center">
-                <i class="material-icons medium">analytics</i>
-                <h5>Avaliações</h5>
-                <h3 class="count">350</h3>
-                <div class="progress grey lighten-1">
-                  <div class="determinate blue lighten-1" style="width: 10%;"></div>
-                </div>
+            </a>
+          </div>
+        
+          <div class="col s12 m6 l3 z-depth-3">
+            <a href="" class="black-text">
+              <div class="card-panel center ">
+                  <i class="material-icons medium" id="blueColor">analytics</i>
+                  <h5>Avaliações</h5>
+                  <h3 class="count">350</h3>
+                  <div class="progress grey lighten-1">
+                    <div class="determinate blue accent-2" style="width: 61%;"></div>
+                  </div>
               </div>
-            </div>
-
-            <!--Div para chamados -->
-            <div class="row">
-              <div class="col s12">      
-                <ul class="collection">
-                  
-                  <li class="collection-item avatar" ><h4>Chamados</h4><p>Veja abaixo alguns de seus chamados</p></li>
-                  
-                  <li class="collection-item avatar">
-                      <img src="img/renan.jpeg" alt="" class="circle">
-                      <span class="title">Renan Aragão</span>
-                      <p>Troca de senha</p>
-                      <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
-                    
-                  </li>
-                  
-                  <li class="collection-item avatar">
-                    <img src="img/person1.jpg" alt="" class="circle">
-                    <span class="title">Israel Dantas</span>
-                    <p>Mudança de ficha</p>
-                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
-                  </li>
-                  
-                  <li class="collection-item avatar">
-                    <img src="img/person2.jpg" alt="" class="circle">
-                    <span class="title">Lucas Lima</span>
-                    <p>Solicitação de Avaliação</p>
-                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
-                  </li>
-                  
-                  <li class="collection-item avatar">
-                    <img src="img/person3.jpg" alt="" class="circle">
-                    <span class="title">Ana Maria</span>
-                    <p>Solicitação de ficha nova</p>
-                    <a href="#!" class="secondary-content"><i class="material-icons">visibility</i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+              </a>
+          </div>
         </div>
+        
+        <!--Div para chamados -->
+        <div class="row">
+          <div class="col s12 z-depth-3">      
+            <ul class="collection">
+              
+              <li class="collection-item avatar">
+                <h4 id="titleColor">Chamados</h4>
+                <p>Veja abaixo alguns de seus chamados</p>
+              </li>
+              
+              <li class="collection-item avatar">
+                  <img src="img/renan.jpeg" alt="" class="circle">
+                  <span class="title">Renan Aragão</span>
+                  <p>Troca de senha</p>
+                  <a href="#!" class="secondary-content"><i class="material-icons" id="blueColor">visibility</i></a>
+              </li>
+              
+              <li class="collection-item avatar">
+                <img src="img/person1.jpg" alt="" class="circle">
+                <span class="title">Israel Dantas</span>
+                <p>Mudança de ficha</p>
+                <a href="#!" class="secondary-content"><i class="material-icons" id="blueColor">visibility</i></a>
+              </li>
+              
+              <li class="collection-item avatar">
+                <img src="img/person2.jpg" alt="" class="circle">
+                <span class="title">Lucas Lima</span>
+                <p>Solicitação de Avaliação</p>
+                <a href="#!" class="secondary-content"><i class="material-icons" id="blueColor">visibility</i></a>
+              </li>
+              
+              <li class="collection-item avatar">
+                <img src="img/person3.jpg" alt="" class="circle">
+                <span class="title">Ana Maria</span>
+                <p>Solicitação de ficha nova</p>
+                <a href="#!" class="secondary-content"><i class="material-icons" id="blueColor">visibility</i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Div para o ChartJs -->
+        <div class="row">
+          <div class="col s12 z-depth-3">
+            <div class="card ">
+              <canvas id="chart"></canvas>
+            </div>
+          </div>
+        </div>
+        
     </div>
   </main>
 
@@ -223,7 +269,7 @@
   </footer>
 
   <!-- Inicio das chamdas de Scripts -->
-
+    
     <!-- Jquery-->
     <script src="js/jquery.js"></script> 
     
@@ -233,17 +279,34 @@
     <!-- Funcoes -->
     <script src="js/funcoes.js"></script>
 
+    <script src="js/BlocoDeAnotacoes.js"></script>
+
     <script>
-      var myVar;
-
-function myFunction() {
-    myVar = setTimeout(showPage, 2000); // aumentei o tempo para ilustração
-}
-
-function showPage() {
-   document.getElementById("loader").style.display = "none";
-   document.getElementById("myDiv").style.display = "block";
-}
+      // Dados de exemplo
+      var data = {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+        datasets: [{
+          label: 'Visitas ao Site',
+          data: [500, 800, 650, 900, 700],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      };
+  
+      // Configurações do gráfico
+      var options = {
+        responsive: true,
+        maintainAspectRatio: false
+      };
+  
+      // Criar o gráfico
+      var ctx = document.getElementById('chart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+      });
     </script>
   <!-- Fim das chamadas de Scripts -->
 </body>

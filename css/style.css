@@ -49,16 +49,25 @@ nav .brand-logo i.material-icons {
     min-width: 150px;
 }
 
+
 /* Conteudo da pagina */
 
 #main {
-    position: relative;
-    height: 100%
+  position: relative;
+  height: 100%
 }
 
 #main-title{
-    left: 0px;
-    top: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+#blueColor {
+  color: #0c3350;
+}
+
+#titleColor {
+  color: #032946df;
 }
 
 
