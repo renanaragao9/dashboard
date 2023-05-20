@@ -16,6 +16,11 @@ $(document).ready(function(){
       hoverEnabled: false
     });
 
+    // Chamada para os selects
+    $('select').formSelect();
+
+    
+
     // Chamada para o input Data
     $('.datepicker').pickadate({
       monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
@@ -33,8 +38,6 @@ $(document).ready(function(){
       selectYears: 15 
       });
 
-      // Chamada para os selects
-    $('select').formSelect();
 
 });
 
