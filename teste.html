@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>ToDo List</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Importando o Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-  <!-- Seu conteúdo vai aqui -->
-  <div class="container">
-    <h3>Lista de Tarefas</h3>
-  
-    <form id="todo-form">
-      <div class="input-field">
-        <input type="text" id="todo-input" autocomplete="off">
-        <label for="todo-input"></label>
-      </div>
-      <button class="btn waves-effect waves-light" type="submit">Adicionar</button>
-    </form>
-  
-    <ul id="todo-list" class="collection"></ul>
-  </div>
-  
-  <script src="js/BlocoDeAnotacoes.js"></script>
-  <!-- Jquery-->
-  <script src="js/jquery.js"></script> 
-    
-  <!-- Materialize-->
-  <script src="js/materialize.js"></script>
-  
-  <!-- Funcoes -->
-  <script src="js/funcoes.js"></script>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Item 1</td>
+        <td>
+          <!-- Botão de ação -->
+          <a class="waves-effect waves-light btn dropdown-trigger" href="#" data-target="dropdown1">Ação</a>
+          <!-- Dropdown de botões -->
+          <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Opção 1</a></li>
+            <li><a href="#!">Opção 2</a></li>
+            <li><a href="#!">Opção 3</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Item 2</td>
+        <td>
+          <!-- Botão de ação -->
+          <a class="waves-effect waves-light btn dropdown-trigger" href="#" data-target="dropdown2">Ação</a>
+          <!-- Dropdown de botões -->
+          <ul id="dropdown2" class="dropdown-content">
+            <li><a href="#!">Opção 1</a></li>
+            <li><a href="#!">Opção 2</a></li>
+            <li><a href="#!">Opção 3</a></li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-<!-- Fim das chamadas de Scripts -->
+  <!-- Importando o jQuery e o Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    // Inicializando o dropdown
+    $(document).ready(function(){
+      $('.dropdown-trigger').dropdown();
+    });
+  </script>
 </body>
 </html>

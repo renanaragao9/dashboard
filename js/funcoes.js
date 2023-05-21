@@ -4,7 +4,11 @@ $(document).ready(function(){
     $(".dropdown-trigger").dropdown({ 
       coverTrigger: false,
     });
-  
+    
+    $(".dropdown-table").dropdown({ 
+      coverTrigger: false,
+    });
+
     // Chamada para ativar o dropdown da navbar
     $('.collapsible').collapsible();
 
@@ -19,7 +23,7 @@ $(document).ready(function(){
     // Chamada para os selects
     $('select').formSelect();
 
-    
+    $('.tooltipped').tooltip();
 
     // Chamada para o input Data
     $('.datepicker').pickadate({

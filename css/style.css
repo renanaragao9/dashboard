@@ -94,6 +94,24 @@ nav .brand-logo i.material-icons {
   color:  #0c3350;
 }
 
+#tableContainer {
+  margin: 20px;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+  padding: 14px 2px;
+}
+
+#td-text {
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+#action-table-mobile {
+  display: none;
+}
+
+
 footer#fixar-rodape {
   border-top: 1px solid #333;
   bottom: 0;
@@ -136,6 +154,19 @@ footer#fixar-rodape {
     }
     
     #botao-cancelar {
+      display: none;
+    }
+
+    #td-text {
+      font-size: 14px;
+      font-weight: bolder;
+    }
+
+    #action-table-mobile {
+      display: inline-block;
+    }
+
+    #action-table-desktop {
       display: none;
     }
 
