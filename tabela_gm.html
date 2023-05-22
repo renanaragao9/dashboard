@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Links dos Icones-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- Links para chamar as bibliotecas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     
+    <!-- Links de customização-->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Israel Tranning</title>
+</head>
+
+<body class="blue-grey lighten-5" onload="myFunction()" style="margin: 0;">
+
+  <!-- Botão Flutuante-->
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large light-blue darken-4">
+        <i class="large material-icons">mode_edit</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">bug_report</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">forum</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating light-blue darken-4"><i class="material-icons">person</i></a></li>
+      </ul>
+    </div>
+  
+  <!-- Inicio da Sidebar e NavBar-->
+  <header>
+    
+    <!-- Sidebar (Menu superior) -->
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+  
+        <!-- Botão hamburguer para o mobile-->
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+        <!-- Botão de sair para o mobile-->
+        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger right"><i class="material-icons">logout</i></a>
+
+        <a href="index.html" class="brand-logo center"><i class="material-icons left" >fitness_center</i>Israel Dantas</a>
+        <ul class="right hide-on-med-and-down">               
+          <li><a href="sass.html"></a></li>
+          <li><a href="#!" ><i class="material-icons right">notifications</i></a></li>
+          <li><a href="badges.html"><i class="material-icons left">mail</i></a></li>
+      
+              <!-- Dropdown Menu -->
+              <li><a href="" id="nav-name">Renan Aragão</a></li>
+              <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
+                <!-- Estrutura do Dropdown -->
+                <ul id="dropdown" class="dropdown-content">
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">person</i>Perfil</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">view_cozy</i>Log</a></li>
+                  <li class="divider"></li><li class="divider"></li><li class="divider"></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">logout</i>Sair</a></li>
+                </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sidenav (Menu Lateral)-->
+    <ul id="slide-out" class="sidenav blue accent-2 text-grey darken-4">
+      <li class="collapsible center"><a class="subheader">Atalhos</a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons" id="nav-title-icon">fitness_center</i>Administração</a></li>
+      <li class="collapsible"><a href="alunos.html" class="waves-effect"><i class="material-icons left">group</i>Alunos</a></li>
+      <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="collapsible-header waves-effect">Cadastro<i class="material-icons">folder_copy</i> <i class="material-icons right">arrow_drop_down</i></a>
+              <div class="collapsible-body blue accent-2">
+                <ul>
+                  <li><a href="cadastro_aluno.html">Aluno<i class="material-icons">person</i></a></li>
+                  <li  class="collapsible"></li>
+                  <li><a href="cadastro_exercicio.html">Exercicio<i class="material-icons">fitness_center</i></a></li>
+                  <li  class="collapsible"></li>
+                  <li><a href="cadastro-gp.html">Grupo Muscular<i class="material-icons">fitness_center</i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect"><i class="material-icons">table_view</i>Tabelas<i class="material-icons right">arrow_drop_down</i></a>
+            <div class="collapsible-body blue accent-2">
+              <ul>
+                <li><a href="#!">Alunos<i class="material-icons ">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Exercicios<i class="material-icons">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Grupos musculares<i class="material-icons">table_chart</i></a></li>
+                <li  class="collapsible"></li>
+                <li><a href="#!">Grupos de exercicios<i class="material-icons">table_chart</i></a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">bar_chart_4_bars</i>Estatisticas </a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect"><i class="material-icons">forum</i>Chamados </a></li>
+    </ul>
+</header>
+
+<!-- início do preloader -->
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom"> 
+
+  <!-- Conteúdo -->
+  <main >
+    <div id="tableContainer">
+      <div class="row">
+        
+        <!--Divs para titulo e Reporte -->
+        <div class="row">
+          <div class="col s12 l10">
+            <h3 id="titleColor">Tabela de Exercicios</h3>
+          </div>
+          
+          <div class="col s2" id="button-report">
+            <h2>
+              <a class="waves-effect waves-light btn blue accent-2"><i class="material-icons left" >bug_report</i>Reportar</a>
+            </h2>
+          </div>
+        </div>
+
+        <div class="card z-depth-5">
+          <div class="card-content">
+            <div id="total-records" class="total-records"></div>
+            <input type="text" id="search" placeholder="Pesquisar...">
+            <table class="highlight striped centered">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody id="table-body">
+                <tr>
+                  <td id="td-text">Perna</td>
+                  <td>
+                    
+                    <!-- Botão de ação Mobile-->
+                    <a class="waves-effect waves-light orange darken-4 btn-floating  dropdown-table" id="action-table-mobile" href="#!" data-target="dropdown1" href="#!" ><i class="material-icons">arrow_drop_down</i></a>
+                    
+                    <!-- Dropdown de botões -->
+                    <ul id="dropdown1" class="dropdown-content">
+                      <li><a href="#!" class="orange darken-4">Editar<i class="material-icons">edit</i></a></li>
+                      <li><a href="#!" class="red darken-4 white-text">Excluir<i class="material-icons">delete_forever</i></a></li>
+                    </ul>
+
+                    <!-- Botão de ações Desktop-->
+                    <a class="btn-floating tooltipped orange darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                    <a class="btn-floating tooltipped red darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Excluir"><i class="material-icons">delete_forever</i></a>
+                  </td>
+                </tr>
+
+                <tr>
+                    <td id="td-text">Costas</td>
+                    <td>
+                      
+                      <!-- Botão de ação Mobile-->
+                      <a class="waves-effect waves-light orange darken-4 btn-floating  dropdown-table" id="action-table-mobile" href="#!" data-target="dropdown1" href="#!" ><i class="material-icons">arrow_drop_down</i></a>
+                      
+                      <!-- Dropdown de botões -->
+                      <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!" class="orange darken-4">Editar<i class="material-icons">edit</i></a></li>
+                        <li><a href="#!" class="red darken-4 white-text">Excluir<i class="material-icons">delete_forever</i></a></li>
+                      </ul>
+  
+                      <!-- Botão de ações Desktop-->
+                      <a class="btn-floating tooltipped orange darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                      <a class="btn-floating tooltipped red darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Excluir"><i class="material-icons">delete_forever</i></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td id="td-text">Biceps</td>
+                    <td>
+                      
+                      <!-- Botão de ação Mobile-->
+                      <a class="waves-effect waves-light orange darken-4 btn-floating  dropdown-table" id="action-table-mobile" href="#!" data-target="dropdown1" href="#!" ><i class="material-icons">arrow_drop_down</i></a>
+                      
+                      <!-- Dropdown de botões -->
+                      <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!" class="orange darken-4">Editar<i class="material-icons">edit</i></a></li>
+                        <li><a href="#!" class="red darken-4 white-text">Excluir<i class="material-icons">delete_forever</i></a></li>
+                      </ul>
+  
+                      <!-- Botão de ações Desktop-->
+                      <a class="btn-floating tooltipped orange darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                      <a class="btn-floating tooltipped red darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Excluir"><i class="material-icons">delete_forever</i></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td id="td-text">Triceps</td>
+                    <td>
+                      
+                      <!-- Botão de ação Mobile-->
+                      <a class="waves-effect waves-light orange darken-4 btn-floating  dropdown-table" id="action-table-mobile" href="#!" data-target="dropdown1" href="#!" ><i class="material-icons">arrow_drop_down</i></a>
+                      
+                      <!-- Dropdown de botões -->
+                      <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!" class="orange darken-4">Editar<i class="material-icons">edit</i></a></li>
+                        <li><a href="#!" class="red darken-4 white-text">Excluir<i class="material-icons">delete_forever</i></a></li>
+                      </ul>
+  
+                      <!-- Botão de ações Desktop-->
+                      <a class="btn-floating tooltipped orange darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                      <a class="btn-floating tooltipped red darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Excluir"><i class="material-icons">delete_forever</i></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td id="td-text">Ombro</td>
+                    <td>
+                      
+                      <!-- Botão de ação Mobile-->
+                      <a class="waves-effect waves-light orange darken-4 btn-floating  dropdown-table" id="action-table-mobile" href="#!" data-target="dropdown1" href="#!" ><i class="material-icons">arrow_drop_down</i></a>
+                      
+                      <!-- Dropdown de botões -->
+                      <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="#!" class="orange darken-4">Editar<i class="material-icons">edit</i></a></li>
+                        <li><a href="#!" class="red darken-4 white-text">Excluir<i class="material-icons">delete_forever</i></a></li>
+                      </ul>
+  
+                      <!-- Botão de ações Desktop-->
+                      <a class="btn-floating tooltipped orange darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Editar"><i class="material-icons">edit</i></a>
+                      <a class="btn-floating tooltipped red darken-4 btn-large waves-effect waves-light red" id="action-table-desktop" data-position="bottom" data-tooltip="Excluir"><i class="material-icons">delete_forever</i></a>
+                    </td>
+                  </tr>
+
+                <!-- Adicione mais registros aqui -->
+              </tbody>
+            </table>
+            <div id="no-results" class="no-results-message" style="display: none;">Nenhum registro encontrado</div>
+            <div id="total-records" class="total-records"></div>
+          </div>
+        </div>
+
+      </div>  
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="section light-blue darken-4 white-text center">
+    <p>Renan Aragão Copyright &copy; 2023</p>
+  </footer>
+
+  <!-- Inicio das chamdas de Scripts -->
+    
+    <!-- Jquery-->
+    <script src="js/jquery.js"></script> 
+    
+    <!-- Materialize-->
+    <script src="js/materialize.js"></script>
+    
+    <!-- Funcoes -->
+    <script src="js/funcoes.js"></script>
+
+    <!-- Bloco de Anotações na index -->
+    <script src="js/BlocoDeAnotacoes.js"></script>
+
+    <!-- Filtragem de pesquisa da tabela -->
+    <script src="js/pesquisaTabela.js"></script>
+
+    <script>
+      // Dados de exemplo
+      var data = {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+        datasets: [{
+          label: 'Visitas ao Site',
+          data: [500, 800, 650, 900, 700],
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+        }]
+      };
+  
+      // Configurações do gráfico
+      var options = {
+        responsive: true,
+        maintainAspectRatio: false
+      };
+  
+      // Criar o gráfico
+      var ctx = document.getElementById('chart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+      });
+    </script>
+
+  <!-- Fim das chamadas de Scripts -->
+</body>
+</html>

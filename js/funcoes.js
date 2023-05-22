@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-    // Chamada para ativar o dropdown do menu navbar
+    // Chamadas para ativar os dropdowns
+
     $(".dropdown-trigger").dropdown({ 
       coverTrigger: false,
     });
@@ -8,6 +9,9 @@ $(document).ready(function(){
     $(".dropdown-table").dropdown({ 
       coverTrigger: false,
     });
+
+    // Chamada para o Modal
+    $('.modal').modal();
 
     // Chamada para ativar o dropdown da navbar
     $('.collapsible').collapsible();
@@ -23,7 +27,10 @@ $(document).ready(function(){
     // Chamada para os selects
     $('select').formSelect();
 
+    // Chamada para a descrição dos icones na tabela
     $('.tooltipped').tooltip();
+
+    CKEDITOR.replace('body');
 
     // Chamada para o input Data
     $('.datepicker').pickadate({
@@ -42,7 +49,6 @@ $(document).ready(function(){
       selectYears: 15 
       });
 
-
 });
 
 
@@ -57,7 +63,7 @@ $(document).ready(function(){
 
 
 /* Chamada pro Preloader   */ 
-var myVar;
+let myVar;
       
 function myFunction() {
     myVar = setTimeout(showPage, 2000); // aumentei o tempo para ilustração
