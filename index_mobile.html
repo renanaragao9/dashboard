@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <!-- Link para chamar o chartJS-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      
@@ -19,44 +20,24 @@
     <title>Israel Tranning</title>
 </head>
 
-<body class="blue-grey lighten-5" onload="myFunction()" style="margin: 0;">
+<body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
 
   <!-- Botão Flutuante-->
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-large light-blue darken-4">
-      <i class="large material-icons">mode_edit</i>
-    </a>
+  <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
     <ul>
-      <li>
-        <a class="btn-floating modal-trigger light-blue darken-4" href="#report-modal">
-          <i class="material-icons">bug_report</i>
-        </a>
-      </li>
-      <li>
-        <a class="btn-floating light-blue darken-4" href="chamados.html">
-          <i class="material-icons">forum</i>
-        </a>
-      </li>
-      <li>
-        <a class="btn-floating light-blue darken-4" href="graficos.html">
-          <i class="material-icons">insert_chart</i>
-        </a>
-      </li>
-      <li>
-        <a class="btn-floating modal-trigger light-blue darken-4" href="#user-modal">
-          <i class="material-icons">person</i>
-        </a>
-      </li>
+      <li class="waves-effect waves-light"><a><i class="material-icons">analytics</i></a></li>
+      <li class="waves-effect waves-light"><a><i class="material-icons">home</i></a></li>
+      <li class="waves-effect waves-light"><a><i class="material-icons">forum</i></a></li>
     </ul>
   </div>
-
+  
   <!-- Inicio da Sidebar e NavBar-->
   <header>
     
     <!-- Sidebar (Menu superior) -->
     <nav>
       <div class="nav-wrapper light-blue darken-4">
-
+  
         <!-- Botão hamburguer para o mobile-->
         <a href="#" data-target="slide-out" class="sidenav-trigger">
           <i class="material-icons">menu</i>
@@ -72,8 +53,7 @@
           <i class="material-icons left" >fitness_center</i>
           Israel Dantas
         </a>
-
-        <ul class="right hide-on-med-and-down">               
+        <ul class="right hide-on-med-and-down">              
           <li>
             <a href="sass.html"></a>
           </li>
@@ -103,113 +83,30 @@
     </nav>
 
     <!-- Sidenav (Menu Lateral)-->
-    <ul id="slide-out" class="sidenav blue accent-2 text-grey darken-4">
-      <li class="collapsible center">
-        <a class="#!">Atalhos</a>
-      </li>
-      <li class="collapsible">
-        <a href="#!" class="waves-effect">
-          Administração
-          <i class="material-icons" id="nav-title-icon">fitness_center</i>
-        </a>
-      </li>
-      <li class="collapsible">
-        <a href="alunos.html" class="waves-effect">
-          Alunos
-          <i class="material-icons left">group</i>
-        </a>
-      </li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect">
-              Cadastro
-              <i class="material-icons">folder_copy</i> 
-              <i class="material-icons right">arrow_drop_down</i>
-            </a>
-            <div class="collapsible-body blue accent-2">
-              <ul>
-                <li>
-                  <a href="cadastro_aluno.html">
-                    Aluno
-                    <i class="material-icons">person</i>
-                  </a>
-                </li>
-                <li class="collapsible"></li>
-                <li>
-                  <a href="cadastro_exercicio.html">
-                    Exercicio
-                    <i class="material-icons">fitness_center</i>
-                  </a>
-                </li>
-                <li class="collapsible"></li>
-                <li>
-                  <a href="cadastro-gp.html">
-                    Grupo Muscular
-                    <i class="material-icons">fitness_center</i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="collapsible-header waves-effect">
-              Tabelas
-              <i class="material-icons">table_view</i>
-              <i class="material-icons right">arrow_drop_down</i>
-            </a>
-            <div class="collapsible-body blue accent-2">
-              <ul>
-                <li>
-                  <a href="tabela_fichas.html">
-                    Fichas
-                    <i class="material-icons ">table_chart</i>
-                  </a>
-                </li>
-                <li  class="collapsible"></li>
-                <li>
-                  <a href="tabela_exercicios.html">
-                    Exercicios
-                    <i class="material-icons">table_chart</i>
-                  </a>
-                </li>
-                <li  class="collapsible"></li>
-                <li>
-                  <a href="tabela_gm.html">
-                    Grupos musculares
-                    <i class="material-icons">table_chart</i>
-                  </a>
-                </li>
-                <li class="collapsible"></li>
-                <li>
-                  <a href="tabela_gm.html">
-                    Grupos de exercicios
-                    <i class="material-icons">table_chart</i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <li class="collapsible">
-        <a href="graficos.html" class="waves-effect">
-          Estatisticas
-          <i class="material-icons">bar_chart_4_bars</i>
-        </a>
-      </li>
-      <li class="collapsible">
-        <a href="chamados.html" class="waves-effect">
-          Chamados 
-          <i class="material-icons">forum</i>
-        </a>
-      </li>
-    
+    <ul id="slide-out" class="sidenav light-blue darken-4 z-depth-5">
+      <li class="center">
+        <div class="user-view">
+          <div class="background">
+            <img src="img/ocean.jpg">
+          </div>
+          <a href="#user"><img class="circle" id="img-perfil-mobile" src="img/renan.jpeg"></a>
+          <a href="#name"><span class="white-text name" id="perfil-mobile-text">Renan Aragao</span></a>
+          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div>
+    </li>
+      <li><a class="subheader collapsible">Conteúdo</a></li>
+
+      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Perfil <i class="material-icons">person</i></a></li>
+      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Avaliação <i class="material-icons">analytics</i></a></li>
+      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Chamados <i class="material-icons">forum</i></a></li>
+
+      <li><a class="subheader collapsible">Ficha</a></li>
+
+      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Perna <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
     </ul>
+        
   </header>
 
   <!-- início do preloader -->
@@ -217,14 +114,15 @@
   <div style="display:none;" id="myDiv" class="animate-bottom"> 
   
   <!-- Conteúdo -->
-  <main >
+  <main>
     <div class="container">
       <div class="row">
         
         <!--Divs para titulo e Reporte -->
         <div class="row">
           <div class="col s12 l10">
-            <h3 id="titleColor">Painel de Gráficos</h3>
+            <h3 id="title-bv">Bom dia, Renan. <p>tenha um bom treino!</p> </h3>
+            
           </div>
           
           <div class="col l2" id="button-report">
@@ -234,21 +132,138 @@
           </div>
         </div>
 
-        <!--Div para o ChartJs -->
+        <!--Div para o bloco de notas -->
         <div class="row">
-          <div class="col s12 z-depth-3">
-            <div class="card ">
-              <canvas id="chart"></canvas>
+          <div class="col s12">
+            <div class="card-panel">
+              <h4 id="title-bv"> Bloco de anotações</h4>
+              <p class="small" >Faça aqui as suas anotações de treino</p>
+        
+              <form id="todo-form">
+                <div class="input-field">
+                  <input type="text" id="todo-input" autocomplete="off" placeholder="Digite aqui a sua anotação">
+                </div>
+                <button class="btn waves-effect waves-light blue accent-2" type="submit">Adicionar</button>
+              </form>
+        
+              <ul id="todo-list" class="collection"></ul>
             </div>
           </div>
         </div>
-      </div>  
+
+        <div class="row">
+          <div class="col s12">
+            <h5 id="title-card" class="center">Relação de treino</h5>
+          </div>
+        </div>
+        
+        <!-- Cards da ficha-->
+        <div class="row">
+          <a href="#!">
+            <div class="card horizontal z-depth-3" id="card-mobile">
+              <div class="card-image">
+                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Perna</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="row">
+          <a href="#!">
+            <div class="card horizontal z-depth-3" id="card-mobile">
+              <div class="card-image">
+                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Costas e Biceps</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="row">
+          <a href="#!">
+            <div class="card horizontal z-depth-3" id="card-mobile">
+              <div class="card-image">
+                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Peito, Ombro e Triceps</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h5 id="title-card" class="center">avaliação física, chamado e conteúdo extra</h5>
+          </div>
+        </div>
+        
+        <!-- Cards da avaliação-->
+        <div class="row">
+          <a href="#!">
+            <div class="card horizontal z-depth-3" id="card-mobile">
+              <div class="card-image">
+                <i class="material-icons" id="icon-card-mobile">analytics</i>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Avaliação</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Cards da avaliação-->
+        <div class="row">
+          <a href="#!">
+            <div class="card horizontal z-depth-3" id="card-mobile">
+              <div class="card-image">
+                <i class="material-icons" id="icon-card-mobile">forum</i>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Chamados</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Cards da avaliação-->
+        <div class="row">
+          <a href="#!">
+            <div class="card horizontal z-depth-3" id="card-mobile">
+              <div class="card-image">
+                <i class="material-icons" id="icon-card-mobile">difference</i>
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Conteúdo extra</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="section light-blue darken-4 white-text center">
-    <p>Renan Aragão Copyright &copy; 2023</p>
+    
   </footer>
 
    <!-- Janelas modais -->
@@ -343,35 +358,18 @@
     <!-- Funcoes -->
     <script src="js/funcoes.js"></script>
 
+    <!-- Bloco de anotações -->
     <script src="js/BlocoDeAnotacoes.js"></script>
 
+    <!-- Editor de texto -->
     <script src="https://cdn.ckeditor.com/4.11.1/standard/ckeditor.js"></script>
 
     <script>
-      // Dados de exemplo
-      var data = {
-        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
-        datasets: [{
-          label: 'Visitas ao Site',
-          data: [500, 800, 650, 900, 700],
-          backgroundColor: 'rgba(54, 162, 235, 0.6)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }]
-      };
-  
-      // Configurações do gráfico
-      var options = {
-        responsive: true,
-        maintainAspectRatio: false
-      };
-  
-      // Criar o gráfico
-      var ctx = document.getElementById('chart').getContext('2d');
-      new Chart(ctx, {
-        type: 'bar',
-        data: data,
-        options: options
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.fixed-mobile');
+        var instances = M.FloatingActionButton.init(elems, {
+          toolbarEnabled: true
+        });
       });
     </script>
   <!-- Fim das chamadas de Scripts -->
