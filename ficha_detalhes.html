@@ -18,18 +18,18 @@
     <link rel="stylesheet" href="css/style.css">
     
     <title>Israel Tranning</title>
-</head>
+  </head>
 
-<body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
+  <body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
 
-  <!-- Botão Flutuante-->
-  <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
-    <ul>
-      <li class="waves-effect waves-light"><a><i class="material-icons">analytics</i></a></li>
-      <li class="waves-effect waves-light"><a><i class="material-icons">home</i></a></li>
-      <li class="waves-effect waves-light"><a><i class="material-icons">forum</i></a></li>
-    </ul>
-  </div>
+    <!-- Botão Flutuante-->
+    <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
+      <ul>
+        <li class="waves-effect waves-light"><a><i class="material-icons">analytics</i></a></li>
+        <li class="waves-effect waves-light"><a><i class="material-icons">home</i></a></li>
+        <li class="waves-effect waves-light"><a><i class="material-icons">forum</i></a></li>
+      </ul>
+    </div>
   
   <!-- Inicio da Sidebar e NavBar-->
   <header>
@@ -114,156 +114,41 @@
   <div style="display:none;" id="myDiv" class="animate-bottom"> 
   
   <!-- Conteúdo -->
-  <main>
+  <main id="main-ficha">
     <div class="container">
-      <div class="row">
-        
-        <!--Divs para titulo e Reporte -->
         <div class="row">
-          <div class="col s12 l10">
-            <h3 id="title-bv">Bom dia, Renan. <p>tenha um bom treino!</p> </h3>
+            <div class="row">
+                <div class="col s12">
+                    <h5 id="title-card" class="center">Detalhes do exercício:</h5>
+                    <h6 id="title-card" class="center">Supino reto</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inicio do conteudo -->
+        <div class="row">
+
+            <div class="col s12">
+                <img class="responsive-img materialboxed" width="650" src="img/músculos-trabalhados-durante-o-supin.jpg" alt="">
+            </div>
+
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <h6 id="details-title">Descrição do exercício</h6>
+                        <p>O supino é um exercício físico que é uma forma de levantamento de peso voltado principalmente para o treinamento dos músculos peitorais maiores, mas que também envolve, como sinergistas, os músculos deltóide, serrátil anterior, coracobraquial e tríceps braquial. Enquanto está deitado em decúbito dorsal, de preferência sobre um "banco" específico, o praticante abaixa uma barra com pesos até perto do peito [90º graus], e então a empurra para cima até que seus cotovelos estejam estendidos (ou próximos a isso). Os nomes "supino" ou "supino reto" são tradicionalmente associados ao exercício quando efetuado com barra, sobre um banco com 0 graus de inclinação, entretanto existem variações conforme o equipamento utilizado para a resistência (máquinas, halteres, elásticos, barra), angulação do banco (plano, inclinado, declinado) e tipo de pegada (aberta, fechada, invertida). </p>
+                    </div>
+                </div>
+            </div>
+        </div>
             
-          </div>
-          
-          <div class="col l2" id="button-report">
-            <h2>
-              <a class="waves-effect waves-light btn modal-trigger blue accent-2" href="#report-modal"><i class="material-icons left" >bug_report</i>Reportar</a>
-            </h2>
-          </div>
-        </div>
-
-        <!--Div para o bloco de notas -->
-        <div class="row">
-          <div class="col s12">
-            <div class="card-panel">
-              <h4 id="title-bv"> Bloco de anotações</h4>
-              <p class="small" >Faça aqui as suas anotações de treino</p>
         
-              <form id="todo-form">
-                <div class="input-field">
-                  <input type="text" id="todo-input" autocomplete="off" placeholder="Digite aqui a sua anotação">
-                </div>
-                <button class="btn waves-effect waves-light blue accent-2" type="submit">Adicionar</button>
-              </form>
-        
-              <ul id="todo-list" class="collection"></ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <h5 id="title-card" class="center">Relação de treino</h5>
-          </div>
-        </div>
-        
-        <!-- Cards da ficha-->
-        <div class="row">
-          <a href="ficha.html">
-            <div class="card horizontal z-depth-3 waves-light" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content ">
-                  <p>Perna</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Costas e Biceps</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Peito, Ombro e Triceps</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <h5 id="title-card" class="center">avaliação física, chamados e conteúdo extra</h5>
-          </div>
-        </div>
-        
-        <!-- Cards da avaliação-->
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">analytics</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Avaliação</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Cards da avaliação-->
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">forum</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Chamados</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Cards da avaliação-->
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">difference</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Conteúdo extra</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="section light-blue darken-4 white-text center">
-    
+ 
   </footer>
 
    <!-- Janelas modais -->
@@ -302,46 +187,9 @@
   <div id="user-modal" class="modal">
     <div class="modal-content">
       <h4>Adicionar Aluno</h4>
-      <form>
-        <div class="row">
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon-nome" type="text" class="validate">
-              <label for="icon-nome">Nome</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_sobrenome" type="text" class="validate">
-              <label for="icon_sobrenome">Sobrenome</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telefone</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">calendar_month</i>                       
-              <input type="date" class="datepicker">
-              
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">mail</i>
-              <input id="email" type="email" class="validate">
-              <label for="email">E-mail</label>
-              <span class="helper-text" data-error="Email Inválido" data-success="Email Valido"></span>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">lock</i>
-              <input id="password" type="password" class="validate">
-              <label for="password">Senha</label>
-            </div>
-        </div>
-      </form>
+      
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SozaXNWVZxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
       <div class="modal-footer">
         <a href="#!" class="modal-action modal-close btn light-blue darken-4 left white-text">Adicionar</a>
       </div>

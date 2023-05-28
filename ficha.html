@@ -18,18 +18,18 @@
     <link rel="stylesheet" href="css/style.css">
     
     <title>Israel Tranning</title>
-</head>
+  </head>
 
-<body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
+  <body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
 
-  <!-- Botão Flutuante-->
-  <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
-    <ul>
-      <li class="waves-effect waves-light"><a><i class="material-icons">analytics</i></a></li>
-      <li class="waves-effect waves-light"><a><i class="material-icons">home</i></a></li>
-      <li class="waves-effect waves-light"><a><i class="material-icons">forum</i></a></li>
-    </ul>
-  </div>
+    <!-- Botão Flutuante-->
+    <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
+      <ul>
+        <li class="waves-effect waves-light"><a><i class="material-icons">analytics</i></a></li>
+        <li class="waves-effect waves-light"><a><i class="material-icons">home</i></a></li>
+        <li class="waves-effect waves-light"><a><i class="material-icons">forum</i></a></li>
+      </ul>
+    </div>
   
   <!-- Inicio da Sidebar e NavBar-->
   <header>
@@ -114,156 +114,105 @@
   <div style="display:none;" id="myDiv" class="animate-bottom"> 
   
   <!-- Conteúdo -->
-  <main>
+  <main id="main-ficha">
     <div class="container">
-      <div class="row">
-        
-        <!--Divs para titulo e Reporte -->
         <div class="row">
-          <div class="col s12 l10">
-            <h3 id="title-bv">Bom dia, Renan. <p>tenha um bom treino!</p> </h3>
-            
+            <div class="row">
+                <div class="col s12">
+                    <h5 id="title-card" class="center">Ficha de treino:</h5>
+                    <h6 id="title-card" class="center">Peito, Triceps e Ombro</h6>
+                </div>
+            </div>
+        </div>
+
+        <!-- INICIO DA CARD -->
+        <div class="row">
+            <div class="col s12 m7">
+              <div class="card" id="introduction">
+                <div class="card-image">
+                  <img class="materialboxed" src="img/agachamento.jpg">
+                  <a href="#user-modal" class="modal-trigger btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">movie</i></a>
+                </div>
+                <div class="card-content z-depth-1">
+                  <span class="card-title" id="card-title">Barra fixa</span>
+
+                  <p id="card-text"> <strong id="strong"> Serie: </strong> 4 </p>
+                  <p id="card-text"> <strong id="strong"> Repetição: </strong> 12 </p>
+                  <p id="card-text"> <strong id="strong"> Carga: </strong> 10 Kg </p>
+                  <p id="card-text"> <strong id="strong"> Descanso: </strong> 00:30s </p>
+                  <p id="card-text"> <strong id="strong"> Observação: </strong> Faça uma isometria na ultima repetição </p>
+
+                </div>
+                <div class="card-action">
+                  <a href="#structure" class="">Concluir</a>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <div class="col l2" id="button-report">
-            <h2>
-              <a class="waves-effect waves-light btn modal-trigger blue accent-2" href="#report-modal"><i class="material-icons left" >bug_report</i>Reportar</a>
-            </h2>
+
+          <!-- INICIO DA CARD -->
+        <div class="row">
+            <div class="col s12 m7">
+              <div class="card" id="structure">
+                <div class="card-image">
+                  <img class="materialboxed" src="img/agachamento.jpg">
+                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                </div>
+                <div class="card-content z-depth-1">
+                  <span class="card-title" id="card-title">Elevação Pelvica</span>
+
+                  <p id="card-text"> <strong id="strong"> Serie: </strong> 4 </p>
+                  <p id="card-text"> <strong id="strong"> Repetição: </strong> 12 </p>
+                  <p id="card-text"> <strong id="strong"> Carga: </strong> 10 Kg </p>
+                  <p id="card-text"> <strong id="strong"> Descanso: </strong> 00:30s </p>
+                  <p id="card-text"> <strong id="strong"> Observação: </strong> Faça uma isometria na ultima repetição </p>
+
+                </div>
+                <div class="card-action">
+                  <a href="#initialization">Concluir</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!--Div para o bloco de notas -->
+          <!-- INICIO DA CARD -->
         <div class="row">
-          <div class="col s12">
-            <div class="card-panel">
-              <h4 id="title-bv"> Bloco de anotações</h4>
-              <p class="small" >Faça aqui as suas anotações de treino</p>
-        
-              <form id="todo-form">
-                <div class="input-field">
-                  <input type="text" id="todo-input" autocomplete="off" placeholder="Digite aqui a sua anotação">
+            <div class="col s12 m7">
+              <div class="card" id="initialization">
+                <div class="card-image">
+                  <img class="materialboxed" src="img/agachamento.jpg">
+                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
                 </div>
-                <button class="btn waves-effect waves-light blue accent-2" type="submit">Adicionar</button>
-              </form>
-        
-              <ul id="todo-list" class="collection"></ul>
+                <div class="card-content z-depth-1">
+                  <span class="card-title" id="card-title">Agachamento Sumô</span>
+
+                  <p id="card-text"> <strong id="strong"> Serie: </strong> 4 </p>
+                  <p id="card-text"> <strong id="strong"> Repetição: </strong> 12 </p>
+                  <p id="card-text"> <strong id="strong"> Carga: </strong> 10 Kg </p>
+                  <p id="card-text"> <strong id="strong"> Descanso: </strong> 00:30s </p>
+                  <p id="card-text"> <strong id="strong"> Observação: </strong> Faça uma isometria na ultima repetição </p>
+
+                </div>
+                <div class="card-action">
+                  <a href="#introduction">Concluir</a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="row">
-          <div class="col s12">
-            <h5 id="title-card" class="center">Relação de treino</h5>
+          <div class="row">
+            <div class="col s12">            
+              <button class="btn btn-large waves-effect waves-light orange darken-4" id="card-btn" type="submit" name="action">Finalizar treino
+                <i class="material-icons right">done</i>
+              </button>
+            </div>
           </div>
-        </div>
-        
-        <!-- Cards da ficha-->
-        <div class="row">
-          <a href="ficha.html">
-            <div class="card horizontal z-depth-3 waves-light" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content ">
-                  <p>Perna</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Costas e Biceps</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">fitness_center</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Peito, Ombro e Triceps</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="row">
-          <div class="col s12">
-            <h5 id="title-card" class="center">avaliação física, chamados e conteúdo extra</h5>
-          </div>
-        </div>
-        
-        <!-- Cards da avaliação-->
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">analytics</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Avaliação</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Cards da avaliação-->
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">forum</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Chamados</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Cards da avaliação-->
-        <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
-              <div class="card-image">
-                <i class="material-icons" id="icon-card-mobile">difference</i>
-              </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Conteúdo extra</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="section light-blue darken-4 white-text center">
-    
+ 
   </footer>
 
    <!-- Janelas modais -->
@@ -302,46 +251,8 @@
   <div id="user-modal" class="modal">
     <div class="modal-content">
       <h4>Adicionar Aluno</h4>
-      <form>
-        <div class="row">
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon-nome" type="text" class="validate">
-              <label for="icon-nome">Nome</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_sobrenome" type="text" class="validate">
-              <label for="icon_sobrenome">Sobrenome</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telefone</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">calendar_month</i>                       
-              <input type="date" class="datepicker">
-              
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">mail</i>
-              <input id="email" type="email" class="validate">
-              <label for="email">E-mail</label>
-              <span class="helper-text" data-error="Email Inválido" data-success="Email Valido"></span>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">lock</i>
-              <input id="password" type="password" class="validate">
-              <label for="password">Senha</label>
-            </div>
-        </div>
-      </form>
+      
+        <iframe width="250" height="300" src="https://www.youtube.com/embed/SozaXNWVZxA" frameborder="0" allowfullscreen></iframe>
       <div class="modal-footer">
         <a href="#!" class="modal-action modal-close btn light-blue darken-4 left white-text">Adicionar</a>
       </div>
