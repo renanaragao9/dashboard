@@ -24,6 +24,12 @@ $(document).ready(function(){
       hoverEnabled: false
     });
 
+    // Chamada para ampliação da imagem
+    $('.materialboxed').materialbox();
+
+    // Chamada para o scroll lateral
+    $('.scrollspy').scrollSpy();
+
     // Chamada para os selects
     $('select').formSelect();
 

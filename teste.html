@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação Física</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Card Horizontal com Materialize</title>
-  <style>
-    .card {
-      display: flex;
-      align-items: center;
-      padding: 12px;
-    }
-
-    .icon {
-      margin-right: 12px;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-  </style>
 </head>
-
 <body>
   <div class="container">
-    <div class="card horizontal" id="card-mobile">
-      <div class="card-image">
-        <i class="material-icons icon">star</i>
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>Texto do card</p>
-        </div>
-      </div>
-    </div>
+    <canvas id="chart"></canvas>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var ctx = document.getElementById('chart').getContext('2d');
+      var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Altura', 'Peso', 'Braço', 'Antebraço', 'Peito', 'Costa', 'Cintura', 'Quadril', 'Glúteo', 'Coxa', 'Panturrilha'],
+          datasets: [{
+            label: 'Avaliação 1',
+            data: [170, 70, 32, 27, 90, 100, 75, 95, 105, 60, 40],
+            backgroundColor: 'rgba(63, 81, 181, 0.6)',
+            borderColor: 'rgba(63, 81, 181, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Avaliação 2',
+            data: [165, 68, 30, 26, 85, 95, 73, 92, 100, 58, 38],
+            backgroundColor: 'rgba(244, 67, 54, 0.6)',
+            borderColor: 'rgba(244, 67, 54, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+          }
+        }
+      });
+    });
+  </script>
 </body>
-
 </html>

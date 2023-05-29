@@ -80,13 +80,19 @@ nav .brand-logo i.material-icons {
 
 #title-bv {
   color: #031523d4;
-  font-size: 22px;
+  font-size: 30px;
 }
+
 
 #title-card {
   color: #054160df;
   font-size: 32px;
 }
+
+#mobile-side {
+  font-size: 18px;
+}
+
 
 /* label focus color */
 .input-field input:focus + label {
@@ -158,6 +164,48 @@ nav .brand-logo i.material-icons {
   margin-left: 25px;
   font-size: 37px;
   color: rgb(234, 236, 243);
+}
+
+#card-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #0c3350;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#card-text {
+  font-size: 18px;
+  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#card-btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#assessment-mobile {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 20px;
+  background-color: #0c3350;
+}
+
+#assessment-mobile p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin-right: 50px;
+  font-weight: bolder;
+  color: rgb(234, 236, 243);
+}
+
+#assessment-icon-img {
+  width: 80px;
+  height: 80px;
 }
 
 #img-perfil-mobile {

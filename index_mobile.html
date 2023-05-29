@@ -22,12 +22,12 @@
 
 <body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
 
-  <!-- Botão Flutuante-->
+  <!-- Botão flutuante Fixo-->
   <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
     <ul>
-      <li class="waves-effect waves-light"><a><i class="material-icons">analytics</i></a></li>
-      <li class="waves-effect waves-light"><a><i class="material-icons">home</i></a></li>
-      <li class="waves-effect waves-light"><a><i class="material-icons">forum</i></a></li>
+      <li class="waves-effect waves-light"> <a href="avaliacao_aluno.html"> <i class="material-icons">analytics</i> </a> </li>
+      <li class="waves-effect waves-light"> <a href="index_mobile.html"> <i class="material-icons">home</i> </a> </li>
+      <li class="waves-effect waves-light"> <a href="#!"> <i class="material-icons">forum</i> </a> </li>
     </ul>
   </div>
   
@@ -53,6 +53,7 @@
           <i class="material-icons left" >fitness_center</i>
           Israel Dantas
         </a>
+        
         <ul class="right hide-on-med-and-down">              
           <li>
             <a href="sass.html"></a>
@@ -89,22 +90,24 @@
           <div class="background">
             <img src="img/ocean.jpg">
           </div>
+
           <a href="#user"><img class="circle" id="img-perfil-mobile" src="img/renan.jpeg"></a>
           <a href="#name"><span class="white-text name" id="perfil-mobile-text">Renan Aragao</span></a>
           <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div>
-    </li>
-      <li><a class="subheader collapsible">Conteúdo</a></li>
+      </li>
+      
+      <li> <a class="subheader collapsible">Conteúdo</a> </li>
 
-      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Perfil <i class="material-icons">person</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Avaliação <i class="material-icons">analytics</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Chamados <i class="material-icons">forum</i></a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Perfil <i class="material-icons">person</i></a></li>
+      <li class="collapsible"><a href="avaliacao_aluno.html" class="waves-effect" id="mobile-side"> Avaliação <i class="material-icons">analytics</i></a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Chamados <i class="material-icons">forum</i></a></li>
 
       <li><a class="subheader collapsible">Ficha</a></li>
 
-      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Perna <i class="material-icons">fitness_center</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Perna <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
     </ul>
         
   </header>
@@ -122,7 +125,6 @@
         <div class="row">
           <div class="col s12 l10">
             <h3 id="title-bv">Bom dia, Renan. <p>tenha um bom treino!</p> </h3>
-            
           </div>
           
           <div class="col l2" id="button-report">
@@ -151,21 +153,23 @@
           </div>
         </div>
 
+        <!--Titulo-->
         <div class="row">
           <div class="col s12">
             <h5 id="title-card" class="center">Relação de treino</h5>
           </div>
         </div>
         
-        <!-- Cards da ficha-->
+        <!-- Card da ficha-->
         <div class="row">
-          <a href="#!">
-            <div class="card horizontal z-depth-3" id="card-mobile">
+          <a href="ficha.html">
+            <div class="card horizontal z-depth-3 waves-light" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">fitness_center</i>
               </div>
+              
               <div class="card-stacked">
-                <div class="card-content">
+                <div class="card-content ">
                   <p>Perna</p>
                 </div>
               </div>
@@ -173,12 +177,14 @@
           </a>
         </div>
 
+        <!-- Card da ficha-->
         <div class="row">
           <a href="#!">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">fitness_center</i>
               </div>
+              
               <div class="card-stacked">
                 <div class="card-content">
                   <p>Costas e Biceps</p>
@@ -188,12 +194,14 @@
           </a>
         </div>
 
+        <!-- Card da ficha -->
         <div class="row">
           <a href="#!">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">fitness_center</i>
               </div>
+              
               <div class="card-stacked">
                 <div class="card-content">
                   <p>Peito, Ombro e Triceps</p>
@@ -203,19 +211,21 @@
           </a>
         </div>
 
+        <!-- Titulo -->
         <div class="row">
           <div class="col s12">
-            <h5 id="title-card" class="center">avaliação física, chamado e conteúdo extra</h5>
+            <h5 id="title-card" class="center">avaliação física, chamados e conteúdo extra</h5>
           </div>
         </div>
         
-        <!-- Cards da avaliação-->
+        <!-- Card da avaliação -->
         <div class="row">
           <a href="#!">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">analytics</i>
               </div>
+              
               <div class="card-stacked">
                 <div class="card-content">
                   <p>Avaliação</p>
@@ -225,13 +235,14 @@
           </a>
         </div>
 
-        <!-- Cards da avaliação-->
+        <!-- Card de chamados -->
         <div class="row">
           <a href="#!">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">forum</i>
               </div>
+              
               <div class="card-stacked">
                 <div class="card-content">
                   <p>Chamados</p>
@@ -241,13 +252,14 @@
           </a>
         </div>
 
-        <!-- Cards da avaliação-->
+        <!-- Card do conteudo-->
         <div class="row">
           <a href="#!">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">difference</i>
               </div>
+              
               <div class="card-stacked">
                 <div class="card-content">
                   <p>Conteúdo extra</p>
@@ -265,87 +277,6 @@
   <footer class="section light-blue darken-4 white-text center">
     
   </footer>
-
-   <!-- Janelas modais -->
-
-  <!-- Add Post Modal -->
-  <div id="report-modal" class="modal">
-    <div class="modal-content">
-      <h4>reportar problema no site</h4>
-      <form>
-        <div class="input-field">
-          <input type="text" id="title">
-          <label for="title">Titulo</label>
-        </div>
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>Selecione a opção</option>
-            <option value="Add Recurso">Adicionar recurso</option>
-            <option value="Bug">Pagina apresentando Bug</option>
-            <option value="Ma funcionalidade">Má funcionalidade</option>
-            <option value="Outros">Outros</option>
-          </select>
-          <label>Categoria</label>
-        </div>
-        <div class="input-field">
-          <textarea name="body" id="body" class="materialize-textarea"></textarea>
-          <label for="body">Body</label>
-        </div>
-      </form>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close btn light-blue darken-4 left white-text">Reportar</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Add User Modal -->
-  <div id="user-modal" class="modal">
-    <div class="modal-content">
-      <h4>Adicionar Aluno</h4>
-      <form>
-        <div class="row">
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon-nome" type="text" class="validate">
-              <label for="icon-nome">Nome</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="icon_sobrenome" type="text" class="validate">
-              <label for="icon_sobrenome">Sobrenome</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">phone</i>
-              <input id="icon_telephone" type="tel" class="validate">
-              <label for="icon_telephone">Telefone</label>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">calendar_month</i>                       
-              <input type="date" class="datepicker">
-              
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">mail</i>
-              <input id="email" type="email" class="validate">
-              <label for="email">E-mail</label>
-              <span class="helper-text" data-error="Email Inválido" data-success="Email Valido"></span>
-          </div>
-          
-          <div class="input-field col s12 l6">
-              <i class="material-icons prefix">lock</i>
-              <input id="password" type="password" class="validate">
-              <label for="password">Senha</label>
-            </div>
-        </div>
-      </form>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close btn light-blue darken-4 left white-text">Adicionar</a>
-      </div>
-    </div>
 
   <!-- Inicio das chamdas de Scripts -->
     
@@ -372,6 +303,7 @@
         });
       });
     </script>
+
   <!-- Fim das chamadas de Scripts -->
 </body>
 </html>
