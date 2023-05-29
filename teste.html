@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avaliação Física</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<<<<<<< HEAD
 </head>
 <body>
   <div class="container">
@@ -44,6 +45,27 @@
           }
         }
       });
+=======
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <title>Modal com Vídeo do YouTube</title>
+</head>
+<body>
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal">Abrir Modal</a>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SEuKkcX2QnY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+>>>>>>> 5e1b332f37555b3d7c3f0416044532b0c1c2605a
     });
   </script>
 </body>
