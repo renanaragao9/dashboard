@@ -72,7 +72,7 @@ $(document).ready(function(){
 let myVar;
       
 function myFunction() {
-    myVar = setTimeout(showPage, 2000); // aumentei o tempo para ilustração
+    myVar = setTimeout(showPage); // aumentei o tempo para ilustração
 }
 
 function showPage() {

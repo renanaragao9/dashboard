@@ -27,7 +27,7 @@
     <ul>
       <li class="waves-effect waves-light"> <a href="avaliacao_aluno.html"> <i class="material-icons">analytics</i> </a> </li>
       <li class="waves-effect waves-light"> <a href="index_mobile.html"> <i class="material-icons">home</i> </a> </li>
-      <li class="waves-effect waves-light"> <a href="#!"> <i class="material-icons">forum</i> </a> </li>
+      <li class="waves-effect waves-light"> <a href="chamados_aluno.html"> <i class="material-icons">forum</i> </a> </li>
     </ul>
   </div>
   
@@ -49,7 +49,7 @@
         </a>
 
         <!-- Logo Central-->
-        <a href="index.html" class="brand-logo center">
+        <a href="index_mobile.html" class="brand-logo center">
           <i class="material-icons left" >fitness_center</i>
           Israel Dantas
         </a>
@@ -99,15 +99,16 @@
       
       <li> <a class="subheader collapsible">Conteúdo</a> </li>
 
+      <li class="collapsible"><a href="index.html" class="waves-effect" id="mobile-side"> Painel de controle <i class="material-icons">speed</i></a></li>
       <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Perfil <i class="material-icons">person</i></a></li>
       <li class="collapsible"><a href="avaliacao_aluno.html" class="waves-effect" id="mobile-side"> Avaliação <i class="material-icons">analytics</i></a></li>
-      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Chamados <i class="material-icons">forum</i></a></li>
+      <li class="collapsible"><a href="chamados_aluno.html" class="waves-effect" id="mobile-side"> Chamados <i class="material-icons">forum</i></a></li>
 
       <li><a class="subheader collapsible">Ficha</a></li>
 
-      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Perna <i class="material-icons">fitness_center</i></a></li>
-      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
-      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="ficha_perna.html" class="waves-effect" id="mobile-side"> Perna <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="ficha_peito.html" class="waves-effect" id="mobile-side1"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="ficha_costas.html" class="waves-effect" id="mobile-side"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
     </ul>
         
   </header>
@@ -162,7 +163,7 @@
         
         <!-- Card da ficha-->
         <div class="row">
-          <a href="ficha.html">
+          <a href="ficha_perna.html">
             <div class="card horizontal z-depth-3 waves-light" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">fitness_center</i>
@@ -179,7 +180,7 @@
 
         <!-- Card da ficha-->
         <div class="row">
-          <a href="#!">
+          <a href="ficha_costas.html">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">fitness_center</i>
@@ -196,7 +197,7 @@
 
         <!-- Card da ficha -->
         <div class="row">
-          <a href="#!">
+          <a href="ficha_peito.html">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">fitness_center</i>
@@ -220,7 +221,7 @@
         
         <!-- Card da avaliação -->
         <div class="row">
-          <a href="#!">
+          <a href="avaliacao_aluno.html">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">analytics</i>
@@ -237,7 +238,7 @@
 
         <!-- Card de chamados -->
         <div class="row">
-          <a href="#!">
+          <a href="chamados_aluno.html">
             <div class="card horizontal z-depth-3" id="card-mobile">
               <div class="card-image">
                 <i class="material-icons" id="icon-card-mobile">forum</i>
@@ -297,8 +298,8 @@
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.fixed-mobile');
-        var instances = M.FloatingActionButton.init(elems, {
+        let elems = document.querySelectorAll('.fixed-mobile');
+        let instances = M.FloatingActionButton.init(elems, {
           toolbarEnabled: true
         });
       });

@@ -22,20 +22,12 @@
 
 <body class="grey lighten-5" onload="myFunction()" style="margin: 0;">
 
-  <!-- Botão Flutuante-->
+  <!-- Botão flutuante Fixo-->
   <div class="fixed-action-btn toolbar direction-top active" id="mobile-fixed-action">
     <ul>
-        <li class="waves-effect waves-light">
-            <a href="avaliacao_aluno.html"> <i class="material-icons">analytics</i> </a>
-        </li>
-        
-        <li class="waves-effect waves-light">
-            <a href="index_mobile.html"> <i class="material-icons">home</i> </a>
-        </li>
-        
-        <li class="waves-effect waves-light">
-            <a href="#!"> <i class="material-icons">forum</i> </a>
-        </li>
+      <li class="waves-effect waves-light"> <a href="avaliacao_aluno.html"> <i class="material-icons">analytics</i> </a> </li>
+      <li class="waves-effect waves-light"> <a href="index_mobile.html"> <i class="material-icons">home</i> </a> </li>
+      <li class="waves-effect waves-light"> <a href="chamados_aluno.html"> <i class="material-icons">forum</i> </a> </li>
     </ul>
   </div>
   
@@ -57,37 +49,37 @@
         </a>
 
         <!-- Logo Central-->
-        <a href="index.html" class="brand-logo center">
+        <a href="index_mobile.html" class="brand-logo center">
           <i class="material-icons left" >fitness_center</i>
           Israel Dantas
         </a>
         
         <ul class="right hide-on-med-and-down">              
-            <li>
-                <a href="sass.html"></a>
-            </li>
-            
-            <li>
-                <a href="#!"> <i class="material-icons right">notifications</i> </a>
-            </li>
-            
-            <li>
-                <a href="#!"> <i class="material-icons left">mail</i> </a>
-            </li>
+          <li>
+            <a href="sass.html"></a>
+          </li>
+          <li>
+            <a href="#!" >
+              <i class="material-icons right">notifications</i>
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <i class="material-icons left">mail</i>
+            </a>
+          </li>
       
-            <!-- Dropdown Menu -->
-            <li>
-                <a href="#!" id="nav-name">Renan Aragão</a>
-            </li>
-            <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
+              <!-- Dropdown Menu -->
+              <li><a href="#!" id="nav-name">Renan Aragão</a></li>
+              <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
                 <!-- Estrutura do Dropdown -->
                 <ul id="dropdown" class="dropdown-content">
-                <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">person</i>Perfil</a></li>
-                <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">view_cozy</i>Log</a></li>
-                <li class="divider"></li><li class="divider"></li><li class="divider"></li>
-                <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">logout</i>Sair</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">person</i>Perfil</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">view_cozy</i>Log</a></li>
+                  <li class="divider"></li><li class="divider"></li><li class="divider"></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">logout</i>Sair</a></li>
                 </ul>
-            </ul>
+        </ul>
       </div>
     </nav>
 
@@ -98,22 +90,25 @@
           <div class="background">
             <img src="img/ocean.jpg">
           </div>
+
           <a href="#user"><img class="circle" id="img-perfil-mobile" src="img/renan.jpeg"></a>
           <a href="#name"><span class="white-text name" id="perfil-mobile-text">Renan Aragao</span></a>
           <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div>
-    </li>
-      <li><a class="subheader collapsible">Conteúdo</a></li>
+      </li>
+      
+      <li> <a class="subheader collapsible">Conteúdo</a> </li>
 
-      <li class="collapsible"><a href="graficos.html" class="waves-effect" id="mobile-side"> Perfil <i class="material-icons">person</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect" id="mobile-side"> Avaliação <i class="material-icons">analytics</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect" id="mobile-side"> Chamados <i class="material-icons">forum</i></a></li>
+      <li class="collapsible"><a href="index.html" class="waves-effect" id="mobile-side"> Painel de controle <i class="material-icons">speed</i></a></li>
+      <li class="collapsible"><a href="#!" class="waves-effect" id="mobile-side"> Perfil <i class="material-icons">person</i></a></li>
+      <li class="collapsible"><a href="avaliacao_aluno.html" class="waves-effect" id="mobile-side"> Avaliação <i class="material-icons">analytics</i></a></li>
+      <li class="collapsible"><a href="chamados_aluno.html" class="waves-effect" id="mobile-side"> Chamados <i class="material-icons">forum</i></a></li>
 
       <li><a class="subheader collapsible">Ficha</a></li>
 
-      <li class="collapsible"><a href="graficos.html" class="waves-effect" id="mobile-side"> Perna <i class="material-icons">fitness_center</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect" id="mobile-side"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
-      <li class="collapsible"><a href="graficos.html" class="waves-effect" id="mobile-side"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="ficha_perna.html" class="waves-effect" id="mobile-side"> Perna <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="ficha_peito.html" class="waves-effect" id="mobile-side1"> Peito, Ombro e Triceps <i class="material-icons">fitness_center</i></a></li>
+      <li class="collapsible"><a href="ficha_costas.html" class="waves-effect" id="mobile-side"> Costas e Biceps <i class="material-icons">fitness_center</i></a></li>
     </ul>
         
   </header>

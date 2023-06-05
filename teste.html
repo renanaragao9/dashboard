@@ -1,72 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avaliação Física</title>
+  <!-- Adicione os links para os arquivos CSS do Materialize -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<<<<<<< HEAD
 </head>
 <body>
+
   <div class="container">
-    <canvas id="chart"></canvas>
+
+    <!-- Botões de inicialização -->
+    <div class="row">
+      <div class="col s2">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal 1</a>
+      </div>
+      <div class="col s2">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal 2</a>
+      </div>
+      <div class="col s2">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Modal 3</a>
+      </div>
+      <div class="col s2">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal4">Modal 4</a>
+      </div>
+      <div class="col s2">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal5">Modal 5</a>
+      </div>
+    </div>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Título da Modal 1</h4>
+        <div class="card">
+          <div class="card-image">
+            <img src="img_ficha/afundoo.gif">
+          </div>
+          <div class="card-content">
+            <!-- Conteúdo do card, se necessário -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>Título da Modal 2</h4>
+        <div class="card">
+          <div class="card-image">
+            <img src="img_ficha/Arnold-Press.gif">
+          </div>
+          <div class="card-content">
+            <!-- Conteúdo do card, se necessário -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4>Título da Modal 3</h4>
+        <div class="card">
+          <div class="card-image">
+            <img src="imagem3.jpg">
+          </div>
+          <div class="card-content">
+            <!-- Conteúdo do card, se necessário -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <h4>Título da Modal 4</h4>
+        <div class="card">
+          <div class="card-image">
+            <img src="imagem4.jpg">
+          </div>
+          <div class="card-content">
+            <!-- Conteúdo do card, se necessário -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <h4>Título da Modal 5</h4>
+        <div class="card">
+          <div class="card-image">
+            <img src="imagem5.jpg">
+          </div>
+          <div class="card-content">
+            <!-- Conteúdo do card, se necessário -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+      </div>
+    </div>
+
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var ctx = document.getElementById('chart').getContext('2d');
-      var chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Altura', 'Peso', 'Braço', 'Antebraço', 'Peito', 'Costa', 'Cintura', 'Quadril', 'Glúteo', 'Coxa', 'Panturrilha'],
-          datasets: [{
-            label: 'Avaliação 1',
-            data: [170, 70, 32, 27, 90, 100, 75, 95, 105, 60, 40],
-            backgroundColor: 'rgba(63, 81, 181, 0.6)',
-            borderColor: 'rgba(63, 81, 181, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Avaliação 2',
-            data: [165, 68, 30, 26, 85, 95, 73, 92, 100, 58, 38],
-            backgroundColor: 'rgba(244, 67, 54, 0.6)',
-            borderColor: 'rgba(244, 67, 54, 1)',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
-              }
-            }]
-          }
-        }
-      });
-=======
+  <!-- Adicione o link para o arquivo JavaScript do Materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <title>Modal com Vídeo do YouTube</title>
-</head>
-<body>
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal">Abrir Modal</a>
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/SEuKkcX2QnY" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-    </div>
-  </div>
-
+  
+  <!-- Inicialize as modals -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.modal');
-      var instances = M.Modal.init(elems);
->>>>>>> 5e1b332f37555b3d7c3f0416044532b0c1c2605a
+      var modals = document.querySelectorAll('.modal');
+      M.Modal.init(modals);
     });
   </script>
+
 </body>
 </html>
