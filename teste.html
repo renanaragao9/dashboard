@@ -1,134 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Adicione os links para os arquivos CSS do Materialize -->
+  <!-- Adicione os links do Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
 
-  <div class="container">
-
-    <!-- Botões de inicialização -->
-    <div class="row">
-      <div class="col s2">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal 1</a>
-      </div>
-      <div class="col s2">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Modal 2</a>
-      </div>
-      <div class="col s2">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Modal 3</a>
-      </div>
-      <div class="col s2">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal4">Modal 4</a>
-      </div>
-      <div class="col s2">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal5">Modal 5</a>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="input-field col s6">
+      <select id="estado">
+        <option value="" disabled selected>Selecione um estado</option>
+        <option value="ceara">Ceará</option>
+        <option value="saopaulo">São Paulo</option>
+        <!-- Adicione mais opções de estados aqui -->
+      </select>
+      <label>Estado</label>
     </div>
-
-    <!-- Modal 1 -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4>Título da Modal 1</h4>
-        <div class="card">
-          <div class="card-image">
-            <img src="img_ficha/afundoo.gif">
-          </div>
-          <div class="card-content">
-            <!-- Conteúdo do card, se necessário -->
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
+    <div class="input-field col s6">
+      <select id="cidade">
+        <option value="" disabled selected>Selecione uma cidade</option>
+      </select>
+      <label>Cidade</label>
     </div>
-
-    <!-- Modal 2 -->
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <h4>Título da Modal 2</h4>
-        <div class="card">
-          <div class="card-image">
-            <img src="img_ficha/Arnold-Press.gif">
-          </div>
-          <div class="card-content">
-            <!-- Conteúdo do card, se necessário -->
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div id="modal3" class="modal">
-      <div class="modal-content">
-        <h4>Título da Modal 3</h4>
-        <div class="card">
-          <div class="card-image">
-            <img src="imagem3.jpg">
-          </div>
-          <div class="card-content">
-            <!-- Conteúdo do card, se necessário -->
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div id="modal4" class="modal">
-      <div class="modal-content">
-        <h4>Título da Modal 4</h4>
-        <div class="card">
-          <div class="card-image">
-            <img src="imagem4.jpg">
-          </div>
-          <div class="card-content">
-            <!-- Conteúdo do card, se necessário -->
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div id="modal5" class="modal">
-      <div class="modal-content">
-        <h4>Título da Modal 5</h4>
-        <div class="card">
-          <div class="card-image">
-            <img src="imagem5.jpg">
-          </div>
-          <div class="card-content">
-            <!-- Conteúdo do card, se necessário -->
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
   </div>
+</div>
 
-  <!-- Adicione o link para o arquivo JavaScript do Materialize -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-  <!-- Inicialize as modals -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var modals = document.querySelectorAll('.modal');
-      M.Modal.init(modals);
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var estadoSelect = document.getElementById('estado');
+    var cidadeSelect = document.getElementById('cidade');
+
+    var estados = {
+      ceara: ['Fortaleza', 'Juazeiro do Norte', 'Sobral'],
+      saopaulo: ['São Paulo', 'Campinas', 'Guarulhos']
+      // Adicione mais estados e cidades aqui
+    };
+
+    estadoSelect.addEventListener('change', function() {
+      var estado = this.value;
+      cidadeSelect.innerHTML = ''; // Limpar as opções do select
+
+      if (estado !== '') {
+        var cidades = estados[estado];
+        for (var i = 0; i < cidades.length; i++) {
+          var option = document.createElement('option');
+          option.value = cidades[i];
+          option.text = cidades[i];
+          cidadeSelect.appendChild(option);
+        }
+      }
+      M.FormSelect.init(cidadeSelect); // Reinitialize o select para atualizar as opções
     });
-  </script>
+
+    M.FormSelect.init(estadoSelect);
+  });
+</script>
 
 </body>
 </html>

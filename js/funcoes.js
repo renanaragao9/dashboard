@@ -36,6 +36,8 @@ $(document).ready(function(){
     // Chamada para a descrição dos icones na tabela
     $('.tooltipped').tooltip();
 
+    $('input#input_text, textarea#observation').characterCounter();
+
     CKEDITOR.replace('body');
 
     // Chamada para o input Data

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Links dos Icones-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Link para chamar o chartJS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     
+    <!-- Links de customização-->
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    
+    <title>Israel Tranning</title>
+
+</head>
+
+<body class="blue-grey lighten-5" onload="myFunction()" style="margin: 0;">
+
+  <!-- Botão Flutuante-->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large light-blue darken-4">
+      <i class="large material-icons">mode_edit</i>
+    </a>
+    <ul>
+      <li>
+        <a class="btn-floating modal-trigger light-blue darken-4" href="#report-modal">
+          <i class="material-icons">bug_report</i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating light-blue darken-4" href="chamados.html">
+          <i class="material-icons">forum</i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating light-blue darken-4" href="graficos.html">
+          <i class="material-icons">insert_chart</i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating modal-trigger light-blue darken-4" href="#user-modal">
+          <i class="material-icons">person</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Inicio da Sidebar e NavBar-->
+  <header>
+    
+    <!-- Sidebar (Menu superior) -->
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+
+        <!-- Botão hamburguer para o mobile-->
+        <a href="#" data-target="slide-out" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <!-- Botão de sair para o mobile-->
+        <a href="#" data-target="slide-out" id="nav-mobile-icon" class="sidenav-trigger right">
+          <i class="material-icons">logout</i>
+        </a>
+
+        <!-- Logo Central-->
+        <a href="index.html" class="brand-logo center">
+          <i class="material-icons left" >fitness_center</i>
+          Israel Dantas
+        </a>
+
+        <ul class="right hide-on-med-and-down">               
+          <li>
+            <a href="sass.html"></a>
+          </li>
+          <li>
+            <a href="#!" >
+              <i class="material-icons right">notifications</i>
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              <i class="material-icons left">mail</i>
+            </a>
+          </li>
+      
+              <!-- Dropdown Menu -->
+              <li><a href="#!" id="nav-name">Renan Aragão</a></li>
+              <li class="dropdown-trigger" data-target="dropdown"><img src="/img/renan.jpeg" alt="" id="nav-image" class="circle responsive-img"><i class="material-icons right">arrow_drop_down</i></li>
+                <!-- Estrutura do Dropdown -->
+                <ul id="dropdown" class="dropdown-content">
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">person</i>Perfil</a></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">view_cozy</i>Log</a></li>
+                  <li class="divider"></li><li class="divider"></li><li class="divider"></li>
+                  <li><a href="#!" class="black-text"><i class="material-icons" id="blueColor">logout</i>Sair</a></li>
+                </ul>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Sidenav (Menu Lateral)-->
+    <ul id="slide-out" class="sidenav blue accent-2 text-grey darken-4">
+      <li class="collapsible center">
+        <a class="#!">Atalhos</a>
+      </li>
+      <li class="collapsible">
+        <a href="index.html" class="waves-effect">
+          Administração
+          <i class="material-icons" id="nav-title-icon">fitness_center</i>
+        </a>
+      </li>
+      <li class="collapsible">
+        <a href="index_mobile.html" class="waves-effect">
+          Ficha
+          <i class="material-icons" id="nav-title-icon">library_books</i>
+        </a>
+      </li>
+      <li class="collapsible">
+        <a href="alunos.html" class="waves-effect">
+          Alunos
+          <i class="material-icons left">group</i>
+        </a>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect">
+              Cadastro
+              <i class="material-icons">folder_copy</i> 
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+            <div class="collapsible-body blue accent-2">
+              <ul>
+                <li>
+                  <a href="cadastro_aluno.html">
+                    Aluno
+                    <i class="material-icons">person</i>
+                  </a>
+                </li>
+                <li class="collapsible"></li>
+                <li>
+                  <a href="cadastro_exercicio.html">
+                    Exercicio
+                    <i class="material-icons">fitness_center</i>
+                  </a>
+                </li>
+                <li class="collapsible"></li>
+                <li>
+                  <a href="cadastro-gp.html">
+                    Grupo Muscular
+                    <i class="material-icons">fitness_center</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header waves-effect">
+              Tabelas
+              <i class="material-icons">table_view</i>
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+            <div class="collapsible-body blue accent-2">
+              <ul>
+                <li>
+                  <a href="tabela_fichas.html">
+                    Fichas
+                    <i class="material-icons ">table_chart</i>
+                  </a>
+                </li>
+                <li  class="collapsible"></li>
+                <li>
+                  <a href="tabela_exercicios.html">
+                    Exercicios
+                    <i class="material-icons">table_chart</i>
+                  </a>
+                </li>
+                <li  class="collapsible"></li>
+                <li>
+                  <a href="tabela_gm.html">
+                    Grupos musculares
+                    <i class="material-icons">table_chart</i>
+                  </a>
+                </li>
+                <li class="collapsible"></li>
+                <li>
+                  <a href="tabela_gm.html">
+                    Grupos de exercicios
+                    <i class="material-icons">table_chart</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="collapsible">
+        <a href="graficos.html" class="waves-effect">
+          Estatisticas
+          <i class="material-icons">bar_chart_4_bars</i>
+        </a>
+      </li>
+      <li class="collapsible">
+        <a href="chamados.html" class="waves-effect">
+          Chamados 
+          <i class="material-icons">forum</i>
+        </a>
+      </li>
+    
+    </ul>
+  </header>
+
+  <!-- início do preloader -->
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom"> 
+
+  <!-- Conteúdo -->
+  <main>
+    <div class="container">
+      <div class="row">
+        
+        <!--Divs para titulo e Reporte -->
+        <div class="row">
+          <div class="col s12 l10">
+            <h3 id="titleColor">Cadastro de Ficha</h3>
+            <h5 id="titleColor">Aluno: Renan Aragão</h5>
+          </div>
+          
+          <div class="col l2" id="button-report">
+            <h2>
+              <a class="waves-effect waves-light btn blue accent-2"><i class="material-icons left" >bug_report</i>Reportar</a>
+            </h2>
+          </div>
+        </div>
+        
+        <!-- Inicio de conteudo -->
+        <div class="row">
+        <div class="col s12 m12 z-depth-5">
+          <div class="card white">
+              <div class="card-content">           
+                <div class="row">
+                  <form class="col s12">
+                    <div class="row">
+
+                      <div class="input-field col s12">
+                        <h4 class="center">Divisão do Treino</h4>
+                      </div>
+
+                      <div class="input-field col s12 l6">
+                        <select id="groupMuscle">
+                          <option value="" disabled selected>Selecione</option>
+                          <option value="Peito">Peito</option>
+                          <option value="Costas">Costas</option>
+                          <option value="Perna">Perna</option>
+                          <!-- Adicione mais opções de groupMusc aqui -->
+                        </select>
+                        <label>Grupo Muscular</label>
+                      </div>
+                      
+                      <div class="input-field col s12 l6">
+                        <select id="ficha">
+                          <option value="" disabled selected>Selecione</option>
+                        </select>
+                        <label>Exercício</label>
+                      </div>
+                      
+                      <div class="input-field col s12">
+                        <h4 class="center">Especificação do Exercício</h4>
+                      </div>
+                      
+                      <div class="input-field col s12 l6">
+                          <input name="serie" id="serie" type="tel" class="validate">
+                          <label for="serie">Série:</label>
+                      </div>
+                      
+                      <div class="input-field col s12 l6">                      
+                        <input name="repetition" id="repetition" type="tel" class="validate">
+                        <label for="repetition">Repetição:</label>
+                      </div>
+                      
+                      <div class="input-field col s12 l6">
+                          <input name="weight" id="weight" type="tel" class="validate">
+                          <label for="weight">Peso:</label>
+                      </div>
+                      
+                      <div class="input-field col s12 l6">
+                          <input name="rest" id="rest" type="tel" class="validate">
+                          <label for="rest">Descanso:</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <textarea name="observation" id="observation" class="materialize-textarea" data-length="120"></textarea>
+                      <label for="observation">Observação:</label>
+                    </div>
+                  </form>
+                </div>    
+              </div>
+              
+              <div class="card-action">           
+                <button class="btn waves-effect waves-light light-blue darken-4" type="submit" name="action">Salvar
+                  <i class="material-icons right">save</i>
+                </button>
+                <a class="waves-effect waves-light btn right light-blue darken-4" id="botao-cancelar"><i class="material-icons right">cancel</i>Cancelar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fim Inicio de conteudo -->
+      </div>  
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="section light-blue darken-4 white-text center">
+    <p>Renan Aragão Copyright &copy; 2023</p>
+  </footer>
+
+  <!-- Inicio das chamdas de Scripts -->
+    
+    <!-- Jquery-->
+    <script src="js/jquery.js"></script> 
+    
+    <!-- Materialize-->
+    <script src="js/materialize.js"></script>
+    
+    <!-- Funcoes -->
+    <script src="js/funcoes.js"></script>
+
+    <script src="js/BlocoDeAnotacoes.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var groupMuscleSelect = document.getElementById('groupMuscle');
+        var fichaSelect = document.getElementById('ficha');
+
+        var groupMusc = {
+          Peito: ['Supino Reto', 'Crucifixo', 'Supino Declinado'],
+          Costas: ['Barra fixa', 'Puxada', 'Remada'],
+          Perna: ['Leg 45º', 'Passada', 'Agachamento']
+          // Adicione mais grupos aqui
+        };
+
+        groupMuscleSelect.addEventListener('change', function() {
+          var groupMuscl = this.value;
+          fichaSelect.innerHTML = ''; // Limpar as opções do select
+
+          if (groupMuscl !== '') {
+            var ficha = groupMusc[groupMuscl];
+            for (var i = 0; i < ficha.length; i++) {
+              var option = document.createElement('option');
+              option.value = ficha[i];
+              option.text = ficha[i];
+              fichaSelect.appendChild(option);
+            }
+          }
+          M.FormSelect.init(fichaSelect); // Reinitialize o select para atualizar as opções
+        });
+
+        M.FormSelect.init(groupMuscleSelect);
+      });
+    </script>
+  <!-- Fim das chamadas de Scripts -->
+</body>
+</html>
